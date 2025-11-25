@@ -1,10 +1,26 @@
+import React from "react";
 import { Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
 
 const footerLinks = {
-  Services: ["Order Fulfillment", "Warehousing", "Inventory Management", "Returns Handling"],
-  Company: ["About Us", "Careers", "Contact", "Blog"],
-  Resources: ["Help Center", "Documentation", "API", "Status"],
-  Legal: ["Privacy Policy", "Terms of Service", "Cookie Policy", "Security"]
+  "Kumasi Office (Head office)": [
+    "2nd floor gyamaras centre opp jofel restaurant airport airport about Kumasi",
+    "Whats-app +233 262 51 6656",
+    "Office +233 32 239 6561",
+  ],
+  "Accra office": [
+    " GD 119 after church Street behind shell filing station near melcom Mallam Gbawe accra",
+    "Whats-app +233 50 189 6753",
+    "Office +233 32 239 6561 ",
+    "Shedikelagosops@gmail.com",
+  ],
+  "Lagos Office": [
+    "Ige Bdejo Estate, 2 Solomon Ige Street, Beside Abadek Filling Station, Agbenaje, ikola ipaja, Lagos",
+    "+2349130230883, +2348158634707",
+    "Shedikelagosops@gmail.com",
+  ],
+  // Company: ["About Us", "Careers", "Contact", "Blog"],
+
+  Legal: ["Privacy Policy", "Terms of Service", "Cookie Policy", "Security"],
 };
 
 export function Footer() {
@@ -15,26 +31,43 @@ export function Footer() {
           {/* Brand */}
           <div className="lg:col-span-2">
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 bg-gradient-to-br from-yellow-400 to-yellow-500 rounded-lg flex items-center justify-center">
-                <span className="text-slate-900">S</span>
-              </div>
-              <span className="text-xl text-white">Shedike</span>
+              <img
+                src="/s-logo.png"
+                alt="Shedike Logo"
+                className="w-32 h-auto"
+              />
             </div>
             <p className="text-slate-400 mb-6">
-              Professional fulfillment services for growing e-commerce brands. 
+              Professional fulfillment services for growing e-commerce brands.
               Fast, reliable, and affordable.
             </p>
             <div className="flex gap-4">
-              <a href="#" className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-yellow-500 hover:text-slate-900 transition-colors">
+              <a
+                href="https://www.facebook.com/share/16TFZafQTC/"
+                target="_blank"
+                className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-yellow-500 hover:text-slate-900 transition-colors"
+              >
                 <Facebook className="w-5 h-5" />
               </a>
-              <a href="#" className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-yellow-500 hover:text-slate-900 transition-colors">
+              <a
+                href="https://x.com/Shedikeghana?t=l4Ob-UJZer6M_SVUvtBwMA&s=09"
+                target="_blank"
+                className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-yellow-500 hover:text-slate-900 transition-colors"
+              >
                 <Twitter className="w-5 h-5" />
               </a>
-              <a href="#" className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-yellow-500 hover:text-slate-900 transition-colors">
+              <a
+                href="https://www.linkedin.com/company/shedike-fulfillment-logistics/"
+                target="_blank"
+                className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-yellow-500 hover:text-slate-900 transition-colors"
+              >
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a href="#" className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-yellow-500 hover:text-slate-900 transition-colors">
+              <a
+                href="https://www.instagram.com/shedike_group/"
+                target="_blank"
+                className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-yellow-500 hover:text-slate-900 transition-colors"
+              >
                 <Instagram className="w-5 h-5" />
               </a>
             </div>
@@ -47,7 +80,10 @@ export function Footer() {
               <ul className="space-y-2">
                 {links.map((link) => (
                   <li key={link}>
-                    <a href="#" className="text-slate-400 hover:text-yellow-400 transition-colors">
+                    <a
+                      href="#"
+                      className="text-slate-400 hover:text-yellow-400 transition-colors"
+                    >
                       {link}
                     </a>
                   </li>
@@ -62,9 +98,25 @@ export function Footer() {
             © 2024 Shedike Logistics & Fulfillment. All rights reserved.
           </p>
           <div className="flex gap-6 text-sm">
-            <a href="#" className="text-slate-400 hover:text-yellow-400 transition-colors">Privacy</a>
-            <a href="#" className="text-slate-400 hover:text-yellow-400 transition-colors">Terms</a>
-            <a href="#" className="text-slate-400 hover:text-yellow-400 transition-colors">Cookies</a>
+            <a
+              href="#"
+              className="text-slate-400 hover:text-yellow-400 transition-colors"
+            >
+              Privacy
+            </a>
+            <a
+              href="#"
+              className="text-slate-400 hover:text-yellow-400 transition-colors"
+            >
+              Terms
+            </a>
+
+            <a
+              href="#"
+              className="text-slate-400 hover:text-yellow-400 transition-colors"
+            >
+              Cookies
+            </a>
           </div>
         </div>
       </div>

@@ -1,26 +1,77 @@
+import React from "react";
 import { Button } from "./ui/button";
 import { ArrowRight, PlayCircle, CheckCircle2, Zap, Globe } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 
-export function HeroSection({ onNavigateServices }: { onNavigateServices?: () => void }) {
+export function HeroSection({
+  onNavigateServices,
+  onNavigateBusiness,
+}: {
+  onNavigateServices?: () => void;
+  onNavigateBusiness?: () => void;
+}) {
   return (
     <div className="relative bg-gradient-to-br from-yellow-50 via-white to-slate-50 overflow-hidden">
       {/* Navigation */}
       <nav className="container mx-auto px-4 py-6 flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <div className="w-10 h-10 bg-gradient-to-br from-yellow-400 to-yellow-500 rounded-lg flex items-center justify-center">
+          {/* <div className="w-10 h-10 bg-gradient-to-br from-yellow-400 to-yellow-500 rounded-lg flex items-center justify-center">
             <span className="text-slate-900">S</span>
           </div>
-          <span className="text-xl text-slate-900">Shedike</span>
+          <span className="text-xl text-slate-900">Shedike</span> */}
+
+          <img src="/s-logo.png" alt="Shedike Logo" className="w-32 h-auto" />
         </div>
+
         <div className="hidden md:flex items-center gap-8">
-          <a href="#" className="text-slate-700 hover:text-yellow-500 transition-colors">Home</a>
-          <button onClick={onNavigateServices} className="text-slate-700 hover:text-yellow-500 transition-colors">Services</button>
-          <a href="#how-it-works" className="text-slate-700 hover:text-yellow-500 transition-colors">How It Works</a>
-          <a href="#pricing" className="text-slate-700 hover:text-yellow-500 transition-colors">Pricing</a>
-          <a href="#about" className="text-slate-700 hover:text-yellow-500 transition-colors">About</a>
-          <Button variant="outline" className="border-slate-300 text-slate-700 hover:border-yellow-500 hover:text-yellow-500">Sign In</Button>
-          <Button className="bg-yellow-500 hover:bg-yellow-600 text-slate-900">Get a Quote</Button>
+          <a
+            href="#"
+            className="text-slate-700 hover:text-yellow-500 transition-colors"
+          >
+            Home
+          </a>
+          <button
+            onClick={onNavigateServices}
+            className="text-slate-700 hover:text-yellow-500 transition-colors"
+          >
+            Services
+          </button>
+
+          <button
+            onClick={onNavigateBusiness}
+            className="text-slate-700 hover:text-yellow-500 transition-colors"
+          >
+            Grow Your Business
+          </button>
+
+          <a
+            href="#how-it-works"
+            className="text-slate-700 hover:text-yellow-500 transition-colors"
+          >
+            How It Works
+          </a>
+          <a
+            href="#pricing"
+            className="text-slate-700 hover:text-yellow-500 transition-colors"
+          >
+            Pricing
+          </a>
+          <a
+            href="#about"
+            className="text-slate-700 hover:text-yellow-500 transition-colors"
+          >
+            About
+          </a>
+
+          <Button
+            variant="outline"
+            className="border-slate-300 text-slate-700 hover:border-yellow-500 hover:text-yellow-500"
+          >
+            Sign In
+          </Button>
+          <Button className="bg-yellow-500 hover:bg-yellow-600 text-slate-900">
+            Get a Quote
+          </Button>
         </div>
       </nav>
 
@@ -32,22 +83,30 @@ export function HeroSection({ onNavigateServices }: { onNavigateServices?: () =>
               <span className="w-2 h-2 bg-yellow-500 rounded-full animate-pulse"></span>
               <span className="text-sm">Trusted by 500+ E-Commerce Brands</span>
             </div>
-            
+
             <h1 className="text-5xl lg:text-6xl text-slate-900">
-              Reliable, Fast & Affordable Fulfillment for Growing E-Commerce Brands
+              Reliable, Fast & Affordable Fulfillment for Growing E-Commerce
+              Brands
             </h1>
-            
+
             <p className="text-xl text-slate-600">
-              We store, pick, pack, and ship your orders so you can focus on selling. 
-              Get same-day fulfillment with 99.9% accuracy.
+              We store, pick, pack, and ship your orders so you can focus on
+              selling. Get same-day fulfillment with 99.9% accuracy.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="gap-2 bg-yellow-500 hover:bg-yellow-600 text-slate-900">
+              <Button
+                size="lg"
+                className="gap-2 bg-yellow-500 hover:bg-yellow-600 text-slate-900"
+              >
                 Get a Quote
                 <ArrowRight className="w-5 h-5" />
               </Button>
-              <Button size="lg" variant="outline" className="gap-2 border-slate-300 text-slate-700 hover:bg-slate-50">
+              <Button
+                size="lg"
+                variant="outline"
+                className="gap-2 border-slate-300 text-slate-700 hover:bg-slate-50"
+              >
                 <PlayCircle className="w-5 h-5" />
                 See How It Works
               </Button>
@@ -69,7 +128,9 @@ export function HeroSection({ onNavigateServices }: { onNavigateServices?: () =>
                   <Zap className="w-6 h-6 text-yellow-600" />
                 </div>
                 <div>
-                  <div className="text-sm text-slate-500">Average Fulfillment</div>
+                  <div className="text-sm text-slate-500">
+                    Average Fulfillment
+                  </div>
                   <div className="text-slate-900">Same Day</div>
                 </div>
               </div>

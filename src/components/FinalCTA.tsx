@@ -1,3 +1,4 @@
+import React from "react";
 import { Button } from "./ui/button";
 import { ArrowRight, Phone, MessageCircle } from "lucide-react";
 
@@ -10,16 +11,23 @@ export function FinalCTA() {
             Ready to Scale Your Fulfillment?
           </h2>
           <p className="text-xl text-slate-300 mb-12">
-            Join hundreds of successful e-commerce brands who trust Shedike with their fulfillment. 
-            Get started today with a custom quote.
+            Join hundreds of successful e-commerce brands who trust Shedike with
+            their fulfillment. Get started today with a custom quote.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Button size="lg" className="bg-yellow-500 hover:bg-yellow-600 text-slate-900 gap-2">
+            <Button
+              size="lg"
+              className="bg-yellow-500 hover:bg-yellow-600 text-slate-900 gap-2"
+            >
               Get a Quote
               <ArrowRight className="w-5 h-5" />
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-slate-900 gap-2">
+            <Button
+              size="lg"
+              variant="outline"
+              className="border-white text-white hover:bg-white hover:text-slate-900 gap-2"
+            >
               <Phone className="w-5 h-5" />
               Talk to Our Team
             </Button>

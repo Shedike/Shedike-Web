@@ -1,13 +1,25 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { Button } from "../components/ui/button";
 import { ArrowLeft, ArrowRight, Check } from "lucide-react";
 import { servicesData, ServiceData } from "../data/servicesData";
 
-export function ServicesPage({ onNavigateHome }: { onNavigateHome?: () => void }) {
-  const [selectedService, setSelectedService] = useState<ServiceData | null>(null);
+export function ServicesPage({
+  onNavigateHome,
+}: {
+  onNavigateHome?: () => void;
+}) {
+  const [selectedService, setSelectedService] = useState<ServiceData | null>(
+    null
+  );
 
   if (selectedService) {
-    return <ServiceDetail service={selectedService} onBack={() => setSelectedService(null)} onNavigateHome={onNavigateHome} />;
+    return (
+      <ServiceDetail
+        service={selectedService}
+        onBack={() => setSelectedService(null)}
+        onNavigateHome={onNavigateHome}
+      />
+    );
   }
 
   return (
@@ -21,12 +33,34 @@ export function ServicesPage({ onNavigateHome }: { onNavigateHome?: () => void }
           <span className="text-xl text-slate-900">Shedike</span>
         </button>
         <div className="hidden md:flex items-center gap-8">
-          <button onClick={onNavigateHome} className="text-slate-700 hover:text-yellow-500 transition-colors">Home</button>
+          <button
+            onClick={onNavigateHome}
+            className="text-slate-700 hover:text-yellow-500 transition-colors"
+          >
+            Home
+          </button>
           <span className="text-yellow-500">Services</span>
-          <a href="#pricing" className="text-slate-700 hover:text-yellow-500 transition-colors">Pricing</a>
-          <a href="#about" className="text-slate-700 hover:text-yellow-500 transition-colors">About</a>
-          <Button variant="outline" className="border-slate-300 text-slate-700 hover:border-yellow-500 hover:text-yellow-500">Sign In</Button>
-          <Button className="bg-yellow-500 hover:bg-yellow-600 text-slate-900">Get a Quote</Button>
+          <a
+            href="#pricing"
+            className="text-slate-700 hover:text-yellow-500 transition-colors"
+          >
+            Pricing
+          </a>
+          <a
+            href="#about"
+            className="text-slate-700 hover:text-yellow-500 transition-colors"
+          >
+            About
+          </a>
+          <Button
+            variant="outline"
+            className="border-slate-300 text-slate-700 hover:border-yellow-500 hover:text-yellow-500"
+          >
+            Sign In
+          </Button>
+          <Button className="bg-yellow-500 hover:bg-yellow-600 text-slate-900">
+            Get a Quote
+          </Button>
         </div>
       </nav>
 
@@ -41,8 +75,8 @@ export function ServicesPage({ onNavigateHome }: { onNavigateHome?: () => void }
               Complete Fulfillment & Logistics Solutions
             </h1>
             <p className="text-xl text-slate-600">
-              From warehousing to last-mile delivery, we provide end-to-end logistics services 
-              tailored to your business needs.
+              From warehousing to last-mile delivery, we provide end-to-end
+              logistics services tailored to your business needs.
             </p>
           </div>
         </div>
@@ -61,8 +95,12 @@ export function ServicesPage({ onNavigateHome }: { onNavigateHome?: () => void }
                 <div className="w-16 h-16 bg-gradient-to-br from-slate-800 to-slate-900 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                   <service.icon className="w-8 h-8 text-yellow-400" />
                 </div>
-                <h3 className="text-2xl mb-3 text-slate-900">{service.title}</h3>
-                <p className="text-slate-600 mb-6">{service.shortDescription}</p>
+                <h3 className="text-2xl mb-3 text-slate-900">
+                  {service.title}
+                </h3>
+                <p className="text-slate-600 mb-6">
+                  {service.shortDescription}
+                </p>
                 <div className="flex items-center text-yellow-600 group-hover:text-yellow-500">
                   <span className="text-sm">Learn More</span>
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -79,9 +117,13 @@ export function ServicesPage({ onNavigateHome }: { onNavigateHome?: () => void }
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-4xl mb-6">Need a Custom Solution?</h2>
             <p className="text-xl text-slate-300 mb-8">
-              Our team can create a tailored fulfillment package that fits your unique requirements.
+              Our team can create a tailored fulfillment package that fits your
+              unique requirements.
             </p>
-            <Button size="lg" className="bg-yellow-500 hover:bg-yellow-600 text-slate-900">
+            <Button
+              size="lg"
+              className="bg-yellow-500 hover:bg-yellow-600 text-slate-900"
+            >
               Talk to an Expert
             </Button>
           </div>
@@ -91,7 +133,15 @@ export function ServicesPage({ onNavigateHome }: { onNavigateHome?: () => void }
   );
 }
 
-function ServiceDetail({ service, onBack, onNavigateHome }: { service: ServiceData; onBack: () => void; onNavigateHome?: () => void }) {
+function ServiceDetail({
+  service,
+  onBack,
+  onNavigateHome,
+}: {
+  service: ServiceData;
+  onBack: () => void;
+  onNavigateHome?: () => void;
+}) {
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation */}
@@ -103,12 +153,36 @@ function ServiceDetail({ service, onBack, onNavigateHome }: { service: ServiceDa
           <span className="text-xl text-slate-900">Shedike</span>
         </button>
         <div className="hidden md:flex items-center gap-8">
-          <button onClick={onNavigateHome} className="text-slate-700 hover:text-yellow-500 transition-colors">Home</button>
-          <button onClick={onBack} className="text-yellow-500">Services</button>
-          <a href="#pricing" className="text-slate-700 hover:text-yellow-500 transition-colors">Pricing</a>
-          <a href="#about" className="text-slate-700 hover:text-yellow-500 transition-colors">About</a>
-          <Button variant="outline" className="border-slate-300 text-slate-700 hover:border-yellow-500 hover:text-yellow-500">Sign In</Button>
-          <Button className="bg-yellow-500 hover:bg-yellow-600 text-slate-900">Get a Quote</Button>
+          <button
+            onClick={onNavigateHome}
+            className="text-slate-700 hover:text-yellow-500 transition-colors"
+          >
+            Home
+          </button>
+          <button onClick={onBack} className="text-yellow-500">
+            Services
+          </button>
+          <a
+            href="#pricing"
+            className="text-slate-700 hover:text-yellow-500 transition-colors"
+          >
+            Pricing
+          </a>
+          <a
+            href="#about"
+            className="text-slate-700 hover:text-yellow-500 transition-colors"
+          >
+            About
+          </a>
+          <Button
+            variant="outline"
+            className="border-slate-300 text-slate-700 hover:border-yellow-500 hover:text-yellow-500"
+          >
+            Sign In
+          </Button>
+          <Button className="bg-yellow-500 hover:bg-yellow-600 text-slate-900">
+            Get a Quote
+          </Button>
         </div>
       </nav>
 
@@ -132,8 +206,12 @@ function ServiceDetail({ service, onBack, onNavigateHome }: { service: ServiceDa
                 <service.icon className="w-10 h-10 text-yellow-400" />
               </div>
               <div>
-                <div className="text-sm text-slate-600 mb-2">{service.category}</div>
-                <h1 className="text-4xl lg:text-5xl text-slate-900">{service.title}</h1>
+                <div className="text-sm text-slate-600 mb-2">
+                  {service.category}
+                </div>
+                <h1 className="text-4xl lg:text-5xl text-slate-900">
+                  {service.title}
+                </h1>
               </div>
             </div>
             <p className="text-xl text-slate-600">{service.fullDescription}</p>
@@ -148,7 +226,10 @@ function ServiceDetail({ service, onBack, onNavigateHome }: { service: ServiceDa
             <h2 className="text-3xl mb-8 text-slate-900">Key Features</h2>
             <div className="grid md:grid-cols-2 gap-4">
               {service.features.map((feature, index) => (
-                <div key={index} className="flex items-start gap-3 bg-slate-50 p-4 rounded-lg">
+                <div
+                  key={index}
+                  className="flex items-start gap-3 bg-slate-50 p-4 rounded-lg"
+                >
                   <Check className="w-6 h-6 text-yellow-500 flex-shrink-0 mt-0.5" />
                   <span className="text-slate-700">{feature}</span>
                 </div>
@@ -165,8 +246,13 @@ function ServiceDetail({ service, onBack, onNavigateHome }: { service: ServiceDa
             <h2 className="text-3xl mb-8 text-slate-900">Benefits</h2>
             <div className="grid md:grid-cols-3 gap-6">
               {service.benefits.map((benefit, index) => (
-                <div key={index} className="bg-white p-6 rounded-xl border border-slate-200">
-                  <h3 className="text-lg mb-2 text-slate-900">{benefit.title}</h3>
+                <div
+                  key={index}
+                  className="bg-white p-6 rounded-xl border border-slate-200"
+                >
+                  <h3 className="text-lg mb-2 text-slate-900">
+                    {benefit.title}
+                  </h3>
                   <p className="text-slate-600">{benefit.description}</p>
                 </div>
               ))}
@@ -187,7 +273,9 @@ function ServiceDetail({ service, onBack, onNavigateHome }: { service: ServiceDa
                     {index + 1}
                   </div>
                   <div>
-                    <h3 className="text-xl mb-2 text-slate-900">{step.title}</h3>
+                    <h3 className="text-xl mb-2 text-slate-900">
+                      {step.title}
+                    </h3>
                     <p className="text-slate-600">{step.description}</p>
                   </div>
                 </div>
@@ -205,7 +293,9 @@ function ServiceDetail({ service, onBack, onNavigateHome }: { service: ServiceDa
             <div className="bg-white p-8 rounded-xl border border-slate-200">
               <div className="mb-6">
                 <div className="text-sm text-slate-600 mb-2">Starting from</div>
-                <div className="text-4xl text-slate-900 mb-2">{service.pricing.starting}</div>
+                <div className="text-4xl text-slate-900 mb-2">
+                  {service.pricing.starting}
+                </div>
                 <div className="text-slate-600">{service.pricing.model}</div>
               </div>
               <div className="border-t border-slate-200 pt-6">
@@ -230,13 +320,21 @@ function ServiceDetail({ service, onBack, onNavigateHome }: { service: ServiceDa
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-4xl mb-6">Ready to Get Started?</h2>
             <p className="text-xl text-slate-300 mb-8">
-              Get a custom quote for {service.title.toLowerCase()} tailored to your business needs.
+              Get a custom quote for {service.title.toLowerCase()} tailored to
+              your business needs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-yellow-500 hover:bg-yellow-600 text-slate-900">
+              <Button
+                size="lg"
+                className="bg-yellow-500 hover:bg-yellow-600 text-slate-900"
+              >
                 Request a Quote
               </Button>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-slate-900">
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-white text-white hover:bg-white hover:text-slate-900"
+              >
                 Schedule a Call
               </Button>
             </div>

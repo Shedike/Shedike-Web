@@ -1,3 +1,4 @@
+import React from "react";
 import { CheckCircle2, Star } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 
@@ -59,11 +60,11 @@ export function WhyChooseUs() {
 
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
           <div>
-            <div className="rounded-2xl overflow-hidden shadow-xl">
+            <div className="rounded-2xl overflow-hidden shadow-xl border border-red-500">
               <ImageWithFallback
                 src="https://images.unsplash.com/photo-1739204618173-3e89def7140f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3YXJlaG91c2UlMjBmdWxmaWxsbWVudCUyMGJveGVzfGVufDF8fHx8MTc2MzcwNzg4Nnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
                 alt="Warehouse fulfillment"
-                className="w-full h-auto"
+                className="w-full h-[300px]"
               />
             </div>
           </div>

@@ -1,17 +1,23 @@
+import React from "react";
 import { MapPin, CheckCircle2 } from "lucide-react";
 
 export function ActiveRegionsMap() {
   const regions = [
     {
       country: "Nigeria",
-      cities: ["Lagos", "Abuja", "Port Harcourt"],
-      color: "from-yellow-400 to-yellow-500"
+      cities: ["Nationwide"],
+      color: "from-yellow-400 to-yellow-500",
     },
     {
       country: "Ghana",
-      cities: ["Accra", "Kumasi", "Tema"],
-      color: "from-yellow-300 to-yellow-400"
-    }
+      cities: ["Nationwide"],
+      color: "from-yellow-300 to-yellow-400",
+    },
+    {
+      country: "Togo",
+      cities: ["Nationwide"],
+      color: "from-yellow-300 to-yellow-400",
+    },
   ];
 
   return (
@@ -26,7 +32,8 @@ export function ActiveRegionsMap() {
             Serving West Africa
           </h2>
           <p className="text-xl text-slate-600">
-            Currently operating fulfillment centers in Nigeria and Ghana, with expansion plans across Africa.
+            Currently operating fulfillment centers in Nigeria and Ghana, with
+            expansion plans across Africa.
           </p>
         </div>
 
@@ -36,7 +43,7 @@ export function ActiveRegionsMap() {
             {/* Decorative background pattern */}
             <div className="absolute inset-0 bg-gradient-to-br from-yellow-50 via-slate-50 to-slate-100 rounded-3xl overflow-hidden">
               {/* Grid pattern */}
-              
+
               {/* Floating decorative elements */}
               <div className="absolute top-12 left-12 w-32 h-32 bg-gradient-to-br from-yellow-400 to-yellow-500 rounded-full blur-3xl opacity-40 animate-pulse"></div>
             </div>
@@ -53,7 +60,9 @@ export function ActiveRegionsMap() {
                   <div className="h-0.5 w-12 bg-gradient-to-l from-transparent to-yellow-400"></div>
                 </div>
                 <p className="text-slate-600">
-                  Strategic Locations Across<br />West Africa
+                  Strategic Locations Across
+                  <br />
+                  West Africa
                 </p>
               </div>
             </div>
@@ -67,14 +76,21 @@ export function ActiveRegionsMap() {
                 className="group bg-white rounded-2xl p-6 border-2 border-slate-200 hover:border-yellow-400 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
               >
                 <div className="flex items-start gap-5">
-                  <div className={`w-14 h-14 bg-gradient-to-br ${region.color} rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                  <div
+                    className={`w-14 h-14 bg-gradient-to-br ${region.color} rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg group-hover:scale-110 transition-transform duration-300`}
+                  >
                     <MapPin className="w-7 h-7 text-slate-900" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-2xl mb-3 text-slate-900">{region.country}</h3>
+                    <h3 className="text-2xl mb-3 text-slate-900">
+                      {region.country}
+                    </h3>
                     <div className="space-y-2.5">
                       {region.cities.map((city, cityIndex) => (
-                        <div key={cityIndex} className="flex items-center gap-3">
+                        <div
+                          key={cityIndex}
+                          className="flex items-center gap-3"
+                        >
                           <CheckCircle2 className="w-5 h-5 text-yellow-500 flex-shrink-0" />
                           <span className="text-slate-600">{city}</span>
                         </div>
@@ -115,19 +131,27 @@ export function ActiveRegionsMap() {
         {/* Stats */}
         <div className="grid md:grid-cols-4 gap-6 mt-20 max-w-5xl mx-auto">
           <div className="group text-center p-8 bg-gradient-to-br from-white to-slate-50 rounded-2xl border-2 border-slate-200 hover:border-yellow-400 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-            <div className="text-4xl text-transparent bg-clip-text bg-gradient-to-br from-yellow-500 to-yellow-600 mb-2">2</div>
+            <div className="text-4xl text-transparent bg-clip-text bg-gradient-to-br from-yellow-500 to-yellow-600 mb-2">
+              2
+            </div>
             <div className="text-slate-600">Active Countries</div>
           </div>
           <div className="group text-center p-8 bg-gradient-to-br from-white to-slate-50 rounded-2xl border-2 border-slate-200 hover:border-yellow-400 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-            <div className="text-4xl text-transparent bg-clip-text bg-gradient-to-br from-yellow-500 to-yellow-600 mb-2">6</div>
+            <div className="text-4xl text-transparent bg-clip-text bg-gradient-to-br from-yellow-500 to-yellow-600 mb-2">
+              6
+            </div>
             <div className="text-slate-600">Fulfillment Centers</div>
           </div>
           <div className="group text-center p-8 bg-gradient-to-br from-white to-slate-50 rounded-2xl border-2 border-slate-200 hover:border-yellow-400 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-            <div className="text-4xl text-transparent bg-clip-text bg-gradient-to-br from-yellow-500 to-yellow-600 mb-2">50K+</div>
+            <div className="text-4xl text-transparent bg-clip-text bg-gradient-to-br from-yellow-500 to-yellow-600 mb-2">
+              50K+
+            </div>
             <div className="text-slate-600">Orders Monthly</div>
           </div>
           <div className="group text-center p-8 bg-gradient-to-br from-white to-slate-50 rounded-2xl border-2 border-slate-200 hover:border-yellow-400 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-            <div className="text-4xl text-transparent bg-clip-text bg-gradient-to-br from-yellow-500 to-yellow-600 mb-2">24/7</div>
+            <div className="text-4xl text-transparent bg-clip-text bg-gradient-to-br from-yellow-500 to-yellow-600 mb-2">
+              24/7
+            </div>
             <div className="text-slate-600">Support Available</div>
           </div>
         </div>

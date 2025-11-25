@@ -1,10 +1,10 @@
-import { 
-  Package, 
-  Warehouse, 
-  BarChart3, 
-  Tag, 
-  RefreshCw, 
-  Zap, 
+import {
+  Package,
+  Warehouse,
+  BarChart3,
+  Tag,
+  RefreshCw,
+  Zap,
   Globe,
   Boxes,
   Truck,
@@ -16,7 +16,8 @@ import {
   Combine,
   FileCheck,
   Ship,
-  LucideIcon
+  LucideIcon,
+  User,
 } from "lucide-react";
 
 export interface ServiceData {
@@ -48,8 +49,10 @@ export const servicesData: ServiceData[] = [
     title: "Order Fulfillment",
     category: "Core Service",
     icon: Package,
-    shortDescription: "Complete end-to-end order processing from pick to pack to ship with same-day capability.",
-    fullDescription: "Our comprehensive order fulfillment service handles every aspect of getting your products to your customers. From the moment an order is placed to final delivery, we manage the entire process with precision and speed.",
+    shortDescription:
+      "Complete end-to-end order processing from pick to pack to ship with same-day capability.",
+    fullDescription:
+      "Our comprehensive order fulfillment service handles every aspect of getting your products to your customers. From the moment an order is placed to final delivery, we manage the entire process with precision and speed.",
     features: [
       "Same-day order processing for orders received by 2 PM",
       "99.9% order accuracy guarantee",
@@ -58,39 +61,46 @@ export const servicesData: ServiceData[] = [
       "Automated inventory allocation",
       "Quality control at every step",
       "Gift wrapping and special packaging options",
-      "Branded packing slips and inserts"
+      "Branded packing slips and inserts",
     ],
     benefits: [
       {
         title: "Faster Shipping",
-        description: "Same-day processing means your customers receive orders faster, improving satisfaction and loyalty."
+        description:
+          "Same-day processing means your customers receive orders faster, improving satisfaction and loyalty.",
       },
       {
         title: "Reduce Errors",
-        description: "Our systematic approach and quality checks ensure 99.9% accuracy on all orders."
+        description:
+          "Our systematic approach and quality checks ensure 99.9% accuracy on all orders.",
       },
       {
         title: "Scale Easily",
-        description: "Handle peak seasons and growth without hiring additional staff or warehouse space."
-      }
+        description:
+          "Handle peak seasons and growth without hiring additional staff or warehouse space.",
+      },
     ],
     process: [
       {
         title: "Order Received",
-        description: "Orders automatically sync from your e-commerce platform to our system in real-time."
+        description:
+          "Orders automatically sync from your e-commerce platform to our system in real-time.",
       },
       {
         title: "Pick & Pack",
-        description: "Our team picks items from inventory, quality checks them, and packs securely with your branding."
+        description:
+          "Our team picks items from inventory, quality checks them, and packs securely with your branding.",
       },
       {
         title: "Ship & Track",
-        description: "Orders ship via the best carrier for your needs, with tracking information sent automatically."
+        description:
+          "Orders ship via the best carrier for your needs, with tracking information sent automatically.",
       },
       {
         title: "Delivery Confirmation",
-        description: "You and your customer receive delivery confirmation, and the order is marked complete."
-      }
+        description:
+          "You and your customer receive delivery confirmation, and the order is marked complete.",
+      },
     ],
     pricing: {
       starting: "$0.50",
@@ -101,17 +111,19 @@ export const servicesData: ServiceData[] = [
         "Standard packaging materials",
         "Packing slip printing",
         "Shipping label generation",
-        "Order tracking setup"
-      ]
-    }
+        "Order tracking setup",
+      ],
+    },
   },
   {
     id: "warehousing-storage",
     title: "Warehousing & Storage",
     category: "Core Service",
     icon: Warehouse,
-    shortDescription: "Secure, climate-controlled storage facilities with flexible space options for inventory of any size.",
-    fullDescription: "Store your inventory in our modern, secure warehouse facilities designed specifically for e-commerce fulfillment. With flexible storage options and advanced inventory management, you only pay for the space you use.",
+    shortDescription:
+      "Secure, climate-controlled storage facilities with flexible space options for inventory of any size.",
+    fullDescription:
+      "Store your inventory in our modern, secure warehouse facilities designed specifically for e-commerce fulfillment. With flexible storage options and advanced inventory management, you only pay for the space you use.",
     features: [
       "Climate-controlled facilities",
       "24/7 security monitoring and surveillance",
@@ -120,39 +132,46 @@ export const servicesData: ServiceData[] = [
       "Easy scalability as your business grows",
       "Organized racking and shelving systems",
       "Hazmat storage available",
-      "Temperature-sensitive storage options"
+      "Temperature-sensitive storage options",
     ],
     benefits: [
       {
         title: "Cost Effective",
-        description: "Only pay for the space you use with no minimum requirements or long-term commitments."
+        description:
+          "Only pay for the space you use with no minimum requirements or long-term commitments.",
       },
       {
         title: "Security",
-        description: "Your inventory is protected with 24/7 surveillance, alarm systems, and restricted access."
+        description:
+          "Your inventory is protected with 24/7 surveillance, alarm systems, and restricted access.",
       },
       {
         title: "Flexibility",
-        description: "Scale your storage up or down based on seasonal demands and business growth."
-      }
+        description:
+          "Scale your storage up or down based on seasonal demands and business growth.",
+      },
     ],
     process: [
       {
         title: "Send Inventory",
-        description: "Ship your products to our warehouse using our receiving guidelines and protocols."
+        description:
+          "Ship your products to our warehouse using our receiving guidelines and protocols.",
       },
       {
         title: "Receiving & Processing",
-        description: "We receive, count, inspect, and catalog your inventory in our system."
+        description:
+          "We receive, count, inspect, and catalog your inventory in our system.",
       },
       {
         title: "Storage & Organization",
-        description: "Products are stored in optimal locations for efficient picking and organized by SKU."
+        description:
+          "Products are stored in optimal locations for efficient picking and organized by SKU.",
       },
       {
         title: "Ongoing Management",
-        description: "Monitor your inventory levels in real-time through our dashboard with automatic alerts."
-      }
+        description:
+          "Monitor your inventory levels in real-time through our dashboard with automatic alerts.",
+      },
     ],
     pricing: {
       starting: "$0.40",
@@ -163,17 +182,19 @@ export const servicesData: ServiceData[] = [
         "24/7 security monitoring",
         "Receiving and processing",
         "Inventory tracking",
-        "Monthly inventory reports"
-      ]
-    }
+        "Monthly inventory reports",
+      ],
+    },
   },
   {
     id: "inventory-management",
     title: "Inventory Management",
     category: "Technology",
     icon: BarChart3,
-    shortDescription: "Real-time inventory tracking with automated alerts, detailed analytics, and forecasting tools.",
-    fullDescription: "Our advanced inventory management system gives you complete visibility and control over your stock levels. Track inventory in real-time, receive low-stock alerts, and make data-driven decisions with detailed analytics.",
+    shortDescription:
+      "Real-time inventory tracking with automated alerts, detailed analytics, and forecasting tools.",
+    fullDescription:
+      "Our advanced inventory management system gives you complete visibility and control over your stock levels. Track inventory in real-time, receive low-stock alerts, and make data-driven decisions with detailed analytics.",
     features: [
       "Real-time inventory tracking",
       "Automated low-stock alerts",
@@ -182,39 +203,46 @@ export const servicesData: ServiceData[] = [
       "Inventory forecasting tools",
       "Lot and serial number tracking",
       "Expiration date management",
-      "Detailed inventory reports and analytics"
+      "Detailed inventory reports and analytics",
     ],
     benefits: [
       {
         title: "Never Stockout",
-        description: "Automated alerts ensure you reorder before running out of popular items."
+        description:
+          "Automated alerts ensure you reorder before running out of popular items.",
       },
       {
         title: "Data Insights",
-        description: "Understand sales patterns and trends to make smarter inventory decisions."
+        description:
+          "Understand sales patterns and trends to make smarter inventory decisions.",
       },
       {
         title: "Reduce Waste",
-        description: "Track expiration dates and slow-moving items to minimize losses."
-      }
+        description:
+          "Track expiration dates and slow-moving items to minimize losses.",
+      },
     ],
     process: [
       {
         title: "System Setup",
-        description: "We configure your inventory parameters, SKUs, and alert thresholds in our system."
+        description:
+          "We configure your inventory parameters, SKUs, and alert thresholds in our system.",
       },
       {
         title: "Real-Time Sync",
-        description: "Inventory levels update automatically with every order, receipt, and adjustment."
+        description:
+          "Inventory levels update automatically with every order, receipt, and adjustment.",
       },
       {
         title: "Monitoring & Alerts",
-        description: "Receive notifications when inventory reaches reorder points or other critical levels."
+        description:
+          "Receive notifications when inventory reaches reorder points or other critical levels.",
       },
       {
         title: "Reporting & Analysis",
-        description: "Access detailed reports to analyze turnover rates, costs, and inventory health."
-      }
+        description:
+          "Access detailed reports to analyze turnover rates, costs, and inventory health.",
+      },
     ],
     pricing: {
       starting: "Included",
@@ -225,17 +253,19 @@ export const servicesData: ServiceData[] = [
         "SKU-level tracking",
         "Monthly inventory reports",
         "Forecasting tools",
-        "API access for integrations"
-      ]
-    }
+        "API access for integrations",
+      ],
+    },
   },
   {
     id: "pick-pack",
     title: "Pick & Pack Services",
     category: "Fulfillment",
     icon: PackageCheck,
-    shortDescription: "Professional picking, packing, and quality control with custom packaging options available.",
-    fullDescription: "Our expert pick and pack team ensures every order is accurately picked, carefully packed, and quality-checked before shipping. We offer custom packaging options to match your brand identity.",
+    shortDescription:
+      "Professional picking, packing, and quality control with custom packaging options available.",
+    fullDescription:
+      "Our expert pick and pack team ensures every order is accurately picked, carefully packed, and quality-checked before shipping. We offer custom packaging options to match your brand identity.",
     features: [
       "Trained fulfillment specialists",
       "Multi-item order consolidation",
@@ -244,39 +274,46 @@ export const servicesData: ServiceData[] = [
       "Fragile item special handling",
       "Gift wrapping services",
       "Promotional insert inclusion",
-      "Kitting and bundling"
+      "Kitting and bundling",
     ],
     benefits: [
       {
         title: "Brand Experience",
-        description: "Custom packaging creates a memorable unboxing experience that builds brand loyalty."
+        description:
+          "Custom packaging creates a memorable unboxing experience that builds brand loyalty.",
       },
       {
         title: "Accuracy",
-        description: "Systematic picking and quality checks ensure every order is correct."
+        description:
+          "Systematic picking and quality checks ensure every order is correct.",
       },
       {
         title: "Efficiency",
-        description: "Professional team processes orders quickly without sacrificing quality."
-      }
+        description:
+          "Professional team processes orders quickly without sacrificing quality.",
+      },
     ],
     process: [
       {
         title: "Order Assignment",
-        description: "Orders are assigned to pickers based on SKU locations and order complexity."
+        description:
+          "Orders are assigned to pickers based on SKU locations and order complexity.",
       },
       {
         title: "Picking",
-        description: "Items are picked from inventory using barcode scanning for accuracy."
+        description:
+          "Items are picked from inventory using barcode scanning for accuracy.",
       },
       {
         title: "Packing",
-        description: "Products are packed securely with appropriate materials and any custom elements."
+        description:
+          "Products are packed securely with appropriate materials and any custom elements.",
       },
       {
         title: "Quality Check",
-        description: "Final inspection ensures correct items, quantities, and packaging quality."
-      }
+        description:
+          "Final inspection ensures correct items, quantities, and packaging quality.",
+      },
     ],
     pricing: {
       starting: "$0.50",
@@ -287,17 +324,19 @@ export const servicesData: ServiceData[] = [
         "Standard packaging materials",
         "Quality control",
         "Barcode scanning",
-        "Packing slip printing"
-      ]
-    }
+        "Packing slip printing",
+      ],
+    },
   },
   {
     id: "shipping-distribution",
-    title: "Shipping & Distribution",
+    title: "Logistics Services",
     category: "Logistics",
     icon: Truck,
-    shortDescription: "Discounted shipping rates with all major carriers and intelligent routing for fastest delivery.",
-    fullDescription: "Leverage our partnerships with major carriers to access deeply discounted shipping rates. Our intelligent routing system automatically selects the best carrier and service level for each order.",
+    shortDescription:
+      "Discounted shipping rates with all major carriers and intelligent routing for fastest delivery.",
+    fullDescription:
+      "Leverage our partnerships with major carriers to access deeply discounted shipping rates. Our intelligent routing system automatically selects the best carrier and service level for each order.",
     features: [
       "Partnerships with USPS, UPS, FedEx, DHL",
       "Up to 70% discounted shipping rates",
@@ -306,39 +345,46 @@ export const servicesData: ServiceData[] = [
       "Residential and commercial delivery",
       "Signature confirmation options",
       "Insurance coverage available",
-      "Saturday and expedited delivery"
+      "Saturday and expedited delivery",
     ],
     benefits: [
       {
         title: "Lower Costs",
-        description: "Save up to 70% on shipping costs with our negotiated carrier rates."
+        description:
+          "Save up to 70% on shipping costs with our negotiated carrier rates.",
       },
       {
         title: "Faster Delivery",
-        description: "Intelligent routing ensures the fastest delivery time for each destination."
+        description:
+          "Intelligent routing ensures the fastest delivery time for each destination.",
       },
       {
         title: "Flexibility",
-        description: "Multiple carrier options provide backup plans and service level choices."
-      }
+        description:
+          "Multiple carrier options provide backup plans and service level choices.",
+      },
     ],
     process: [
       {
         title: "Rate Shopping",
-        description: "System automatically compares rates across carriers for each order."
+        description:
+          "System automatically compares rates across carriers for each order.",
       },
       {
         title: "Carrier Selection",
-        description: "Best carrier is selected based on cost, speed, and destination."
+        description:
+          "Best carrier is selected based on cost, speed, and destination.",
       },
       {
         title: "Label Generation",
-        description: "Shipping labels are printed and attached to packaged orders."
+        description:
+          "Shipping labels are printed and attached to packaged orders.",
       },
       {
         title: "Pickup & Transit",
-        description: "Carriers pick up daily, with tracking updates provided throughout transit."
-      }
+        description:
+          "Carriers pick up daily, with tracking updates provided throughout transit.",
+      },
     ],
     pricing: {
       starting: "At Cost",
@@ -349,17 +395,19 @@ export const servicesData: ServiceData[] = [
         "Label printing",
         "Daily carrier pickups",
         "Tracking number generation",
-        "Delivery confirmation"
-      ]
-    }
+        "Delivery confirmation",
+      ],
+    },
   },
   {
     id: "returns-management",
     title: "Returns Management",
     category: "Fulfillment",
     icon: RefreshCw,
-    shortDescription: "Streamlined returns processing with inspection, restocking, and customer notification services.",
-    fullDescription: "Make returns hassle-free for both you and your customers. Our comprehensive returns management service handles receiving, inspection, restocking, and can even process refunds or exchanges.",
+    shortDescription:
+      "Streamlined returns processing with inspection, restocking, and customer notification services.",
+    fullDescription:
+      "Make returns hassle-free for both you and your customers. Our comprehensive returns management service handles receiving, inspection, restocking, and can even process refunds or exchanges.",
     features: [
       "Dedicated returns processing area",
       "Item inspection and grading",
@@ -368,39 +416,46 @@ export const servicesData: ServiceData[] = [
       "Damaged item disposal",
       "Return analytics and reporting",
       "Exchange order processing",
-      "Return label generation"
+      "Return label generation",
     ],
     benefits: [
       {
         title: "Happy Customers",
-        description: "Easy returns process increases customer satisfaction and repeat purchases."
+        description:
+          "Easy returns process increases customer satisfaction and repeat purchases.",
       },
       {
         title: "Quick Turnaround",
-        description: "Fast processing means returned items are back in stock and sellable quickly."
+        description:
+          "Fast processing means returned items are back in stock and sellable quickly.",
       },
       {
         title: "Full Visibility",
-        description: "Track return rates, reasons, and trends to improve products and reduce returns."
-      }
+        description:
+          "Track return rates, reasons, and trends to improve products and reduce returns.",
+      },
     ],
     process: [
       {
         title: "Return Initiated",
-        description: "Customer initiates return through your system or via return label."
+        description:
+          "Customer initiates return through your system or via return label.",
       },
       {
         title: "Receiving & Inspection",
-        description: "We receive the return, inspect condition, and document any damage or issues."
+        description:
+          "We receive the return, inspect condition, and document any damage or issues.",
       },
       {
         title: "Processing Decision",
-        description: "Items are either restocked, exchanged, disposed of, or returned to you based on your rules."
+        description:
+          "Items are either restocked, exchanged, disposed of, or returned to you based on your rules.",
       },
       {
         title: "Customer Notification",
-        description: "Customer receives notification of return receipt and any refund or exchange status."
-      }
+        description:
+          "Customer receives notification of return receipt and any refund or exchange status.",
+      },
     ],
     pricing: {
       starting: "$2.50",
@@ -411,17 +466,19 @@ export const servicesData: ServiceData[] = [
         "Restocking to inventory",
         "Disposal of damaged items",
         "Return notification",
-        "Return analytics reporting"
-      ]
-    }
+        "Return analytics reporting",
+      ],
+    },
   },
   {
     id: "kitting-assembly",
     title: "Kitting & Assembly",
     category: "Value-Added",
     icon: Combine,
-    shortDescription: "Product kitting, bundling, and light assembly services for subscription boxes and promotional packages.",
-    fullDescription: "Create custom product bundles, subscription boxes, or promotional kits with our kitting and assembly services. Perfect for gift sets, sample packs, and bundled offerings.",
+    shortDescription:
+      "Product kitting, bundling, and light assembly services for subscription boxes and promotional packages.",
+    fullDescription:
+      "Create custom product bundles, subscription boxes, or promotional kits with our kitting and assembly services. Perfect for gift sets, sample packs, and bundled offerings.",
     features: [
       "Custom product bundling",
       "Subscription box assembly",
@@ -430,39 +487,46 @@ export const servicesData: ServiceData[] = [
       "Shrink wrapping and bundling",
       "Multi-SKU kit management",
       "Quality control for kits",
-      "Seasonal and promotional kitting"
+      "Seasonal and promotional kitting",
     ],
     benefits: [
       {
         title: "Increase Sales",
-        description: "Product bundles and kits often have higher average order values."
+        description:
+          "Product bundles and kits often have higher average order values.",
       },
       {
         title: "Save Time",
-        description: "We handle the labor-intensive work of assembling kits and bundles."
+        description:
+          "We handle the labor-intensive work of assembling kits and bundles.",
       },
       {
         title: "Flexibility",
-        description: "Easily create seasonal bundles or promotional kits without disruption."
-      }
+        description:
+          "Easily create seasonal bundles or promotional kits without disruption.",
+      },
     ],
     process: [
       {
         title: "Kit Definition",
-        description: "You define what components make up each kit or bundle SKU."
+        description:
+          "You define what components make up each kit or bundle SKU.",
       },
       {
         title: "Component Picking",
-        description: "All components for the kit are picked and staged together."
+        description:
+          "All components for the kit are picked and staged together.",
       },
       {
         title: "Assembly",
-        description: "Components are assembled, packaged, and labeled as a complete kit."
+        description:
+          "Components are assembled, packaged, and labeled as a complete kit.",
       },
       {
         title: "Inventory Addition",
-        description: "Completed kits are added to inventory and ready to fulfill as single items."
-      }
+        description:
+          "Completed kits are added to inventory and ready to fulfill as single items.",
+      },
     ],
     pricing: {
       starting: "$1.50",
@@ -473,17 +537,19 @@ export const servicesData: ServiceData[] = [
         "Quality control",
         "Kit packaging",
         "SKU labeling",
-        "Inventory tracking"
-      ]
-    }
+        "Inventory tracking",
+      ],
+    },
   },
   {
     id: "custom-packaging",
     title: "Custom Packaging",
     category: "Value-Added",
     icon: Tag,
-    shortDescription: "Branded packaging, custom boxes, tissue paper, stickers, and personalized inserts for your brand.",
-    fullDescription: "Elevate your brand with custom packaging that creates a memorable unboxing experience. From custom printed boxes to branded tissue paper and promotional inserts, we handle it all.",
+    shortDescription:
+      "Branded packaging, custom boxes, tissue paper, stickers, and personalized inserts for your brand.",
+    fullDescription:
+      "Elevate your brand with custom packaging that creates a memorable unboxing experience. From custom printed boxes to branded tissue paper and promotional inserts, we handle it all.",
     features: [
       "Custom printed boxes and mailers",
       "Branded tissue paper and wrapping",
@@ -492,39 +558,46 @@ export const servicesData: ServiceData[] = [
       "Thank you cards",
       "Gift wrapping options",
       "Eco-friendly packaging materials",
-      "Seasonal packaging options"
+      "Seasonal packaging options",
     ],
     benefits: [
       {
         title: "Brand Recognition",
-        description: "Custom packaging reinforces your brand identity with every order."
+        description:
+          "Custom packaging reinforces your brand identity with every order.",
       },
       {
         title: "Customer Delight",
-        description: "Impressive unboxing experiences lead to social shares and positive reviews."
+        description:
+          "Impressive unboxing experiences lead to social shares and positive reviews.",
       },
       {
         title: "Professional Image",
-        description: "Quality packaging communicates that you care about every detail."
-      }
+        description:
+          "Quality packaging communicates that you care about every detail.",
+      },
     ],
     process: [
       {
         title: "Design Approval",
-        description: "You provide packaging designs and materials, we review for feasibility."
+        description:
+          "You provide packaging designs and materials, we review for feasibility.",
       },
       {
         title: "Material Setup",
-        description: "Custom materials are stocked in our facility and assigned to your account."
+        description:
+          "Custom materials are stocked in our facility and assigned to your account.",
       },
       {
         title: "Fulfillment Integration",
-        description: "Packing instructions are programmed so your custom materials are used for every order."
+        description:
+          "Packing instructions are programmed so your custom materials are used for every order.",
       },
       {
         title: "Quality Assurance",
-        description: "Regular checks ensure packaging standards are maintained consistently."
-      }
+        description:
+          "Regular checks ensure packaging standards are maintained consistently.",
+      },
     ],
     pricing: {
       starting: "$0.75",
@@ -535,17 +608,19 @@ export const servicesData: ServiceData[] = [
         "Quality control",
         "Insert inclusion",
         "Material storage",
-        "Material inventory tracking"
-      ]
-    }
+        "Material inventory tracking",
+      ],
+    },
   },
   {
     id: "same-day-shipping",
     title: "Same-Day Shipping",
     category: "Premium",
     icon: Zap,
-    shortDescription: "Orders received by 2 PM ship the same day for the fastest possible delivery to customers.",
-    fullDescription: "Give your customers the speed they expect with same-day order processing. Orders received by 2 PM are picked, packed, and shipped the same business day.",
+    shortDescription:
+      "Orders received by 2 PM ship the same day for the fastest possible delivery to customers.",
+    fullDescription:
+      "Give your customers the speed they expect with same-day order processing. Orders received by 2 PM are picked, packed, and shipped the same business day.",
     features: [
       "2 PM cutoff time for same-day shipping",
       "Available Monday through Friday",
@@ -554,39 +629,46 @@ export const servicesData: ServiceData[] = [
       "Multiple daily carrier pickups",
       "Real-time order status updates",
       "Weekend processing available (premium)",
-      "Holiday shipping support"
+      "Holiday shipping support",
     ],
     benefits: [
       {
         title: "Competitive Edge",
-        description: "Fast shipping is a major differentiator that helps you compete with large retailers."
+        description:
+          "Fast shipping is a major differentiator that helps you compete with large retailers.",
       },
       {
         title: "Customer Satisfaction",
-        description: "Customers receive orders faster, leading to higher satisfaction and repeat purchases."
+        description:
+          "Customers receive orders faster, leading to higher satisfaction and repeat purchases.",
       },
       {
         title: "Reduced Inquiries",
-        description: "Fast fulfillment means fewer 'where is my order' customer service tickets."
-      }
+        description:
+          "Fast fulfillment means fewer 'where is my order' customer service tickets.",
+      },
     ],
     process: [
       {
         title: "Order Import",
-        description: "Orders are imported to our system immediately when placed on your store."
+        description:
+          "Orders are imported to our system immediately when placed on your store.",
       },
       {
         title: "Priority Processing",
-        description: "Orders received by cutoff are prioritized for immediate pick and pack."
+        description:
+          "Orders received by cutoff are prioritized for immediate pick and pack.",
       },
       {
         title: "Same-Day Pickup",
-        description: "Carriers pick up multiple times daily to ensure same-day orders ship out."
+        description:
+          "Carriers pick up multiple times daily to ensure same-day orders ship out.",
       },
       {
         title: "In-Transit",
-        description: "Tracking information is provided and orders move through carrier network."
-      }
+        description:
+          "Tracking information is provided and orders move through carrier network.",
+      },
     ],
     pricing: {
       starting: "Included",
@@ -597,17 +679,19 @@ export const servicesData: ServiceData[] = [
         "Multiple daily pickups",
         "No additional fees",
         "Real-time tracking",
-        "Cutoff time notifications"
-      ]
-    }
+        "Cutoff time notifications",
+      ],
+    },
   },
   {
     id: "international-shipping",
     title: "International Shipping",
     category: "Logistics",
     icon: Globe,
-    shortDescription: "Global fulfillment to 150+ countries with customs documentation and international compliance.",
-    fullDescription: "Expand your business globally with our international shipping services. We handle customs documentation, compliance, and partner with carriers experienced in international logistics.",
+    shortDescription:
+      "Global fulfillment to 150+ countries with customs documentation and international compliance.",
+    fullDescription:
+      "Expand your business globally with our international shipping services. We handle customs documentation, compliance, and partner with carriers experienced in international logistics.",
     features: [
       "Shipping to 150+ countries",
       "Customs documentation preparation",
@@ -616,39 +700,46 @@ export const servicesData: ServiceData[] = [
       "International carrier partnerships",
       "Landed cost estimation",
       "Restricted item compliance",
-      "Country-specific packaging requirements"
+      "Country-specific packaging requirements",
     ],
     benefits: [
       {
         title: "Global Reach",
-        description: "Sell to customers worldwide without dealing with complex international logistics."
+        description:
+          "Sell to customers worldwide without dealing with complex international logistics.",
       },
       {
         title: "Compliance",
-        description: "We handle all customs paperwork and ensure compliance with international regulations."
+        description:
+          "We handle all customs paperwork and ensure compliance with international regulations.",
       },
       {
         title: "Simplified Process",
-        description: "International orders are processed just like domestic ones in your system."
-      }
+        description:
+          "International orders are processed just like domestic ones in your system.",
+      },
     ],
     process: [
       {
         title: "Order Processing",
-        description: "International orders are identified and routed for special handling."
+        description:
+          "International orders are identified and routed for special handling.",
       },
       {
         title: "Customs Documentation",
-        description: "We prepare all required customs forms, commercial invoices, and declarations."
+        description:
+          "We prepare all required customs forms, commercial invoices, and declarations.",
       },
       {
         title: "International Shipping",
-        description: "Orders ship via appropriate international carrier with full tracking."
+        description:
+          "Orders ship via appropriate international carrier with full tracking.",
       },
       {
         title: "Customs Clearance",
-        description: "Carriers handle customs clearance and final delivery in destination country."
-      }
+        description:
+          "Carriers handle customs clearance and final delivery in destination country.",
+      },
     ],
     pricing: {
       starting: "$5.00",
@@ -659,17 +750,19 @@ export const servicesData: ServiceData[] = [
         "Commercial invoice preparation",
         "International carriers",
         "Tracking to destination",
-        "Compliance verification"
-      ]
-    }
+        "Compliance verification",
+      ],
+    },
   },
   {
     id: "subscription-fulfillment",
     title: "Subscription Box Fulfillment",
     category: "Specialized",
     icon: ShoppingBag,
-    shortDescription: "Specialized fulfillment for subscription boxes with recurring order management and custom kitting.",
-    fullDescription: "Perfect for subscription box businesses, we handle the unique requirements of recurring shipments including kitting, customization, and coordinated monthly shipping.",
+    shortDescription:
+      "Specialized fulfillment for subscription boxes with recurring order management and custom kitting.",
+    fullDescription:
+      "Perfect for subscription box businesses, we handle the unique requirements of recurring shipments including kitting, customization, and coordinated monthly shipping.",
     features: [
       "Recurring order management",
       "Custom kit assembly for each cycle",
@@ -678,39 +771,45 @@ export const servicesData: ServiceData[] = [
       "Plan variation handling",
       "One-time box additions",
       "Gift subscription support",
-      "Seasonal box coordination"
+      "Seasonal box coordination",
     ],
     benefits: [
       {
         title: "Consistency",
-        description: "Ensure every subscriber receives the same great experience month after month."
+        description:
+          "Ensure every subscriber receives the same great experience month after month.",
       },
       {
         title: "Scalability",
-        description: "Easily scale from 100 to 10,000+ subscribers without operational headaches."
+        description:
+          "Easily scale from 100 to 10,000+ subscribers without operational headaches.",
       },
       {
         title: "Flexibility",
-        description: "Support multiple subscription tiers and customize boxes per subscriber."
-      }
+        description:
+          "Support multiple subscription tiers and customize boxes per subscriber.",
+      },
     ],
     process: [
       {
         title: "Box Curation",
-        description: "You select products for the upcoming subscription cycle."
+        description: "You select products for the upcoming subscription cycle.",
       },
       {
         title: "Kit Assembly",
-        description: "We assemble boxes according to your specifications and subscriber variations."
+        description:
+          "We assemble boxes according to your specifications and subscriber variations.",
       },
       {
         title: "Subscriber Sync",
-        description: "Active subscribers are synced from your subscription platform."
+        description:
+          "Active subscribers are synced from your subscription platform.",
       },
       {
         title: "Coordinated Shipping",
-        description: "All boxes ship on schedule, ensuring subscribers receive boxes together."
-      }
+        description:
+          "All boxes ship on schedule, ensuring subscribers receive boxes together.",
+      },
     ],
     pricing: {
       starting: "$3.50",
@@ -721,17 +820,19 @@ export const servicesData: ServiceData[] = [
         "Coordinated shipping",
         "Variation handling",
         "Quality control",
-        "Tracking and notifications"
-      ]
-    }
+        "Tracking and notifications",
+      ],
+    },
   },
   {
     id: "b2b-fulfillment",
     title: "B2B Fulfillment",
     category: "Specialized",
     icon: Boxes,
-    shortDescription: "Wholesale and B2B order fulfillment with pallet shipping, EDI integration, and vendor compliance.",
-    fullDescription: "Fulfill large wholesale orders to retailers and business customers with our B2B fulfillment services. We handle pallet orders, EDI integration, and retailer-specific compliance requirements.",
+    shortDescription:
+      "Wholesale and B2B order fulfillment with pallet shipping, EDI integration, and vendor compliance.",
+    fullDescription:
+      "Fulfill large wholesale orders to retailers and business customers with our B2B fulfillment services. We handle pallet orders, EDI integration, and retailer-specific compliance requirements.",
     features: [
       "Pallet and LTL shipping",
       "EDI integration with retailers",
@@ -740,39 +841,46 @@ export const servicesData: ServiceData[] = [
       "ASN generation",
       "UCC-128 labeling",
       "Appointment scheduling",
-      "Bulk order processing"
+      "Bulk order processing",
     ],
     benefits: [
       {
         title: "Retail Ready",
-        description: "Meet all major retailer requirements and compliance standards."
+        description:
+          "Meet all major retailer requirements and compliance standards.",
       },
       {
         title: "Efficiency",
-        description: "Process large B2B orders quickly without disrupting D2C fulfillment."
+        description:
+          "Process large B2B orders quickly without disrupting D2C fulfillment.",
       },
       {
         title: "Expertise",
-        description: "We understand retailer routing guides and vendor compliance requirements."
-      }
+        description:
+          "We understand retailer routing guides and vendor compliance requirements.",
+      },
     ],
     process: [
       {
         title: "Order Receipt",
-        description: "B2B orders received via EDI, email, or through your system."
+        description:
+          "B2B orders received via EDI, email, or through your system.",
       },
       {
         title: "Compliance Check",
-        description: "Verify all retailer-specific requirements and routing guides."
+        description:
+          "Verify all retailer-specific requirements and routing guides.",
       },
       {
         title: "Picking & Palletizing",
-        description: "Order is picked, cases labeled per requirements, and palletized."
+        description:
+          "Order is picked, cases labeled per requirements, and palletized.",
       },
       {
         title: "Freight & Delivery",
-        description: "Freight carrier scheduled for pickup, ASN sent, delivery appointment made."
-      }
+        description:
+          "Freight carrier scheduled for pickup, ASN sent, delivery appointment made.",
+      },
     ],
     pricing: {
       starting: "$50",
@@ -783,17 +891,19 @@ export const servicesData: ServiceData[] = [
         "UCC-128 labels",
         "ASN generation",
         "EDI integration",
-        "Freight coordination"
-      ]
-    }
+        "Freight coordination",
+      ],
+    },
   },
   {
     id: "cross-docking",
     title: "Cross-Docking",
     category: "Logistics",
     icon: Container,
-    shortDescription: "Receive shipments from suppliers and immediately ship to customers without long-term storage.",
-    fullDescription: "Reduce storage time and costs with cross-docking services. Products received from suppliers are immediately prepped and shipped to end customers or retail locations.",
+    shortDescription:
+      "Receive shipments from suppliers and immediately ship to customers without long-term storage.",
+    fullDescription:
+      "Reduce storage time and costs with cross-docking services. Products received from suppliers are immediately prepped and shipped to end customers or retail locations.",
     features: [
       "Direct supplier-to-customer flow",
       "Minimal storage time",
@@ -802,39 +912,46 @@ export const servicesData: ServiceData[] = [
       "Quality inspection on receipt",
       "Repackaging if needed",
       "Multi-supplier consolidation",
-      "Time-sensitive product handling"
+      "Time-sensitive product handling",
     ],
     benefits: [
       {
         title: "Reduced Costs",
-        description: "Minimize storage fees by shipping products immediately upon receipt."
+        description:
+          "Minimize storage fees by shipping products immediately upon receipt.",
       },
       {
         title: "Faster Delivery",
-        description: "Products reach customers faster without warehouse delays."
+        description:
+          "Products reach customers faster without warehouse delays.",
       },
       {
         title: "Freshness",
-        description: "Ideal for time-sensitive or perishable products that need quick turnaround."
-      }
+        description:
+          "Ideal for time-sensitive or perishable products that need quick turnaround.",
+      },
     ],
     process: [
       {
         title: "Supplier Shipment",
-        description: "Supplier ships products directly to our facility with advance notice."
+        description:
+          "Supplier ships products directly to our facility with advance notice.",
       },
       {
         title: "Receipt & Inspection",
-        description: "Products are received, counted, and inspected immediately upon arrival."
+        description:
+          "Products are received, counted, and inspected immediately upon arrival.",
       },
       {
         title: "Repackaging",
-        description: "Items are repackaged per customer order specifications if needed."
+        description:
+          "Items are repackaged per customer order specifications if needed.",
       },
       {
         title: "Immediate Shipment",
-        description: "Orders ship same or next day without entering long-term storage."
-      }
+        description:
+          "Orders ship same or next day without entering long-term storage.",
+      },
     ],
     pricing: {
       starting: "$1.50",
@@ -845,17 +962,19 @@ export const servicesData: ServiceData[] = [
         "Repackaging if needed",
         "Immediate processing",
         "Supplier coordination",
-        "Expedited handling"
-      ]
-    }
+        "Expedited handling",
+      ],
+    },
   },
   {
     id: "freight-forwarding",
     title: "Freight Forwarding",
     category: "Logistics",
     icon: Ship,
-    shortDescription: "Import and export coordination including freight quotes, customs brokerage, and cargo tracking.",
-    fullDescription: "Navigate the complexities of international freight with our forwarding services. We coordinate ocean and air freight, handle customs brokerage, and ensure your cargo arrives safely.",
+    shortDescription:
+      "Import and export coordination including freight quotes, customs brokerage, and cargo tracking.",
+    fullDescription:
+      "Navigate the complexities of international freight with our forwarding services. We coordinate ocean and air freight, handle customs brokerage, and ensure your cargo arrives safely.",
     features: [
       "Ocean and air freight options",
       "Customs brokerage",
@@ -864,39 +983,46 @@ export const servicesData: ServiceData[] = [
       "Cargo insurance",
       "Import/export documentation",
       "Freight tracking",
-      "Door-to-door service"
+      "Door-to-door service",
     ],
     benefits: [
       {
         title: "Simplified Imports",
-        description: "One partner handles everything from supplier pickup to warehouse delivery."
+        description:
+          "One partner handles everything from supplier pickup to warehouse delivery.",
       },
       {
         title: "Cost Savings",
-        description: "Compare rates across carriers to find the most cost-effective shipping."
+        description:
+          "Compare rates across carriers to find the most cost-effective shipping.",
       },
       {
         title: "Expertise",
-        description: "Navigate customs and compliance with experienced freight forwarding professionals."
-      }
+        description:
+          "Navigate customs and compliance with experienced freight forwarding professionals.",
+      },
     ],
     process: [
       {
         title: "Shipment Planning",
-        description: "Work with you to determine best freight method and coordinate with supplier."
+        description:
+          "Work with you to determine best freight method and coordinate with supplier.",
       },
       {
         title: "Freight Booking",
-        description: "Book cargo space with selected carrier and arrange supplier pickup."
+        description:
+          "Book cargo space with selected carrier and arrange supplier pickup.",
       },
       {
         title: "Customs & Transit",
-        description: "Handle all customs documentation and clearance while cargo is in transit."
+        description:
+          "Handle all customs documentation and clearance while cargo is in transit.",
       },
       {
         title: "Final Delivery",
-        description: "Coordinate final mile delivery to our warehouse or your specified location."
-      }
+        description:
+          "Coordinate final mile delivery to our warehouse or your specified location.",
+      },
     ],
     pricing: {
       starting: "Custom Quote",
@@ -907,17 +1033,19 @@ export const servicesData: ServiceData[] = [
         "Customs brokerage",
         "Documentation",
         "Cargo tracking",
-        "Insurance options"
-      ]
-    }
+        "Insurance options",
+      ],
+    },
   },
   {
     id: "quality-control",
     title: "Quality Control & Inspection",
     category: "Value-Added",
     icon: FileCheck,
-    shortDescription: "Product inspection, quality checks, and defect identification before items enter inventory or ship.",
-    fullDescription: "Ensure product quality with our inspection services. We check items upon receipt or before shipping to identify defects, damage, or quality issues.",
+    shortDescription:
+      "Product inspection, quality checks, and defect identification before items enter inventory or ship.",
+    fullDescription:
+      "Ensure product quality with our inspection services. We check items upon receipt or before shipping to identify defects, damage, or quality issues.",
     features: [
       "Incoming inventory inspection",
       "Pre-shipment quality checks",
@@ -926,39 +1054,46 @@ export const servicesData: ServiceData[] = [
       "Supplier quality reports",
       "Sampling or 100% inspection",
       "Rework and repackaging",
-      "Quality metrics and trends"
+      "Quality metrics and trends",
     ],
     benefits: [
       {
         title: "Prevent Issues",
-        description: "Catch defects before they reach customers, reducing returns and complaints."
+        description:
+          "Catch defects before they reach customers, reducing returns and complaints.",
       },
       {
         title: "Supplier Accountability",
-        description: "Document quality issues to hold suppliers accountable for improvements."
+        description:
+          "Document quality issues to hold suppliers accountable for improvements.",
       },
       {
         title: "Brand Protection",
-        description: "Ensure every product meets your quality standards and protects your reputation."
-      }
+        description:
+          "Ensure every product meets your quality standards and protects your reputation.",
+      },
     ],
     process: [
       {
         title: "Inspection Plan",
-        description: "Define quality standards and inspection criteria for your products."
+        description:
+          "Define quality standards and inspection criteria for your products.",
       },
       {
         title: "Product Inspection",
-        description: "Trained team inspects products according to your specifications."
+        description:
+          "Trained team inspects products according to your specifications.",
       },
       {
         title: "Issue Documentation",
-        description: "Any defects or issues are photographed and documented in detail."
+        description:
+          "Any defects or issues are photographed and documented in detail.",
       },
       {
         title: "Reporting & Action",
-        description: "Receive reports on quality issues and we take agreed-upon actions (rework, reject, etc)."
-      }
+        description:
+          "Receive reports on quality issues and we take agreed-upon actions (rework, reject, etc).",
+      },
     ],
     pricing: {
       starting: "$0.75",
@@ -969,17 +1104,19 @@ export const servicesData: ServiceData[] = [
         "Photo documentation",
         "Quality reporting",
         "Issue tracking",
-        "Trend analysis"
-      ]
-    }
+        "Trend analysis",
+      ],
+    },
   },
   {
     id: "product-photography",
     title: "Product Photography",
     category: "Value-Added",
     icon: Camera,
-    shortDescription: "Professional product photography for e-commerce listings, including white background and lifestyle shots.",
-    fullDescription: "Get professional product images without shipping samples back and forth. Our in-house photography studio can create listing photos, lifestyle shots, and detail images.",
+    shortDescription:
+      "Professional product photography for e-commerce listings, including white background and lifestyle shots.",
+    fullDescription:
+      "Get professional product images without shipping samples back and forth. Our in-house photography studio can create listing photos, lifestyle shots, and detail images.",
     features: [
       "White background product shots",
       "Lifestyle photography",
@@ -988,39 +1125,45 @@ export const servicesData: ServiceData[] = [
       "Photo editing and retouching",
       "Consistent styling across products",
       "Props and staging available",
-      "Quick turnaround time"
+      "Quick turnaround time",
     ],
     benefits: [
       {
         title: "Professional Images",
-        description: "High-quality photos improve conversion rates and make products more appealing."
+        description:
+          "High-quality photos improve conversion rates and make products more appealing.",
       },
       {
         title: "Convenience",
-        description: "Products already at our facility, no need to ship samples to photographers."
+        description:
+          "Products already at our facility, no need to ship samples to photographers.",
       },
       {
         title: "Consistency",
-        description: "All product images have consistent lighting, angles, and styling."
-      }
+        description:
+          "All product images have consistent lighting, angles, and styling.",
+      },
     ],
     process: [
       {
         title: "Photography Request",
-        description: "Submit request specifying products and shot types needed."
+        description:
+          "Submit request specifying products and shot types needed.",
       },
       {
         title: "Staging & Shooting",
-        description: "Products are pulled from inventory, staged, and photographed in our studio."
+        description:
+          "Products are pulled from inventory, staged, and photographed in our studio.",
       },
       {
         title: "Editing",
-        description: "Images are edited, retouched, and optimized for web use."
+        description: "Images are edited, retouched, and optimized for web use.",
       },
       {
         title: "Delivery",
-        description: "Final images delivered via cloud storage, ready for your listings."
-      }
+        description:
+          "Final images delivered via cloud storage, ready for your listings.",
+      },
     ],
     pricing: {
       starting: "$15",
@@ -1031,17 +1174,19 @@ export const servicesData: ServiceData[] = [
         "Photo editing",
         "Background removal",
         "Color correction",
-        "Digital file delivery"
-      ]
-    }
+        "Digital file delivery",
+      ],
+    },
   },
   {
     id: "labeling-barcoding",
     title: "Labeling & Barcoding",
     category: "Value-Added",
     icon: PackageOpen,
-    shortDescription: "Custom label printing, barcode generation, and application for inventory management and compliance.",
-    fullDescription: "Add labels, barcodes, or stickers to products for inventory tracking, compliance, or branding purposes. We handle label design, printing, and application.",
+    shortDescription:
+      "Custom label printing, barcode generation, and application for inventory management and compliance.",
+    fullDescription:
+      "Add labels, barcodes, or stickers to products for inventory tracking, compliance, or branding purposes. We handle label design, printing, and application.",
     features: [
       "Custom label design and printing",
       "Barcode generation (UPC, EAN, SKU)",
@@ -1050,39 +1195,46 @@ export const servicesData: ServiceData[] = [
       "Multi-language labels",
       "Price tags and hang tags",
       "Promotional stickers",
-      "Expiration date labeling"
+      "Expiration date labeling",
     ],
     benefits: [
       {
         title: "Compliance",
-        description: "Ensure products meet retailer or regulatory labeling requirements."
+        description:
+          "Ensure products meet retailer or regulatory labeling requirements.",
       },
       {
         title: "Tracking",
-        description: "Add barcodes for better inventory tracking and scan-ability."
+        description:
+          "Add barcodes for better inventory tracking and scan-ability.",
       },
       {
         title: "Branding",
-        description: "Apply branded labels to generic products or add promotional stickers."
-      }
+        description:
+          "Apply branded labels to generic products or add promotional stickers.",
+      },
     ],
     process: [
       {
         title: "Label Design",
-        description: "You provide label design or we create based on your requirements."
+        description:
+          "You provide label design or we create based on your requirements.",
       },
       {
         title: "Label Printing",
-        description: "Labels are printed in required quantities and stored with your inventory."
+        description:
+          "Labels are printed in required quantities and stored with your inventory.",
       },
       {
         title: "Application",
-        description: "Labels applied to products during receiving or before fulfillment."
+        description:
+          "Labels applied to products during receiving or before fulfillment.",
       },
       {
         title: "Verification",
-        description: "Quality check ensures labels are correctly placed and scannable."
-      }
+        description:
+          "Quality check ensures labels are correctly placed and scannable.",
+      },
     ],
     pricing: {
       starting: "$0.25",
@@ -1093,8 +1245,147 @@ export const servicesData: ServiceData[] = [
         "Material storage",
         "Barcode verification",
         "Label inventory tracking",
-        "Compliance verification"
-      ]
-    }
-  }
+        "Compliance verification",
+      ],
+    },
+  },
+  {
+    id: "virtual-assistance",
+    title: "Virtual Assistance",
+    category: "Value-Added",
+    icon: User,
+    shortDescription:
+      "Virtual assistant services to help you with your business needs.",
+    fullDescription:
+      "Our virtual assistant services can help you with your business needs. We can help you with your accounting, marketing, customer service, and more.",
+    features: [
+      "Accounting",
+      "Marketing",
+      "Customer service",
+      "Social media management",
+      "Email marketing",
+      "Search engine optimization",
+      "Social media marketing",
+    ],
+    benefits: [
+      {
+        title: "Compliance",
+        description:
+          "Ensure products meet retailer or regulatory labeling requirements.",
+      },
+      {
+        title: "Tracking",
+        description:
+          "Add barcodes for better inventory tracking and scan-ability.",
+      },
+      {
+        title: "Branding",
+        description:
+          "Apply branded labels to generic products or add promotional stickers.",
+      },
+    ],
+    process: [
+      {
+        title: "Label Design",
+        description:
+          "You provide label design or we create based on your requirements.",
+      },
+      {
+        title: "Label Printing",
+        description:
+          "Labels are printed in required quantities and stored with your inventory.",
+      },
+      {
+        title: "Application",
+        description:
+          "Labels applied to products during receiving or before fulfillment.",
+      },
+      {
+        title: "Verification",
+        description:
+          "Quality check ensures labels are correctly placed and scannable.",
+      },
+    ],
+    pricing: {
+      starting: "$0.25",
+      model: "per label applied + material costs",
+      includes: [
+        "Label application",
+        "Quality control",
+        "Material storage",
+        "Barcode verification",
+        "Label inventory tracking",
+        "Compliance verification",
+      ],
+    },
+  },
+  {
+    id: "compliance-legal",
+    title: "Compliance & Legal Services",
+    category: "Value-Added",
+    icon: User,
+    shortDescription:
+      "Compliance and legal services to help you with your business needs.",
+    fullDescription:
+      "Our compliance and legal services can help you with your business needs. We can help you with your accounting, marketing, customer service, and more.",
+    features: [
+      "Compliance consulting",
+      "Legal consulting",
+      "Compliance audits",
+      "Compliance training",
+      "Compliance reporting",
+      "Compliance monitoring",
+    ],
+    benefits: [
+      {
+        title: "Compliance",
+        description:
+          "Ensure products meet retailer or regulatory labeling requirements.",
+      },
+      {
+        title: "Tracking",
+        description:
+          "Add barcodes for better inventory tracking and scan-ability.",
+      },
+      {
+        title: "Branding",
+        description:
+          "Apply branded labels to generic products or add promotional stickers.",
+      },
+    ],
+    process: [
+      {
+        title: "Label Design",
+        description:
+          "You provide label design or we create based on your requirements.",
+      },
+      {
+        title: "Label Printing",
+        description:
+          "Labels are printed in required quantities and stored with your inventory.",
+      },
+      {
+        title: "Application",
+        description:
+          "Labels applied to products during receiving or before fulfillment.",
+      },
+      {
+        title: "Verification",
+        description:
+          "Quality check ensures labels are correctly placed and scannable.",
+      },
+    ],
+    pricing: {
+      starting: "$0.25",
+      model: "per label applied + material costs",
+      includes: [
+        "Label application",
+        "Quality control",
+        "Material storage",
+        "Barcode verification",
+        "Label inventory tracking",
+        "Compliance verification",
+      ],
+    },
+  },
 ];
