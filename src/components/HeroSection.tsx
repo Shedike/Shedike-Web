@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button } from "./ui/button";
-import { ArrowRight, PlayCircle, CheckCircle2, Zap, Globe } from "lucide-react";
+import { ArrowRight, PlayCircle, CheckCircle2, Zap, Globe, Menu, X } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 
 export function HeroSection({
@@ -12,75 +12,162 @@ export function HeroSection({
   onNavigateBusiness?: () => void;
   onNavigateContact?: () => void;
 }) {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   return (
     <div className="relative bg-gradient-to-br from-yellow-50 via-white to-slate-50 overflow-hidden">
       {/* Navigation */}
-      <nav className="container mx-auto px-4 py-6 flex items-center justify-between">
-        <div className="flex items-center gap-2">
-          {/* <div className="w-10 h-10 bg-gradient-to-br from-yellow-400 to-yellow-500 rounded-lg flex items-center justify-center">
-            <span className="text-slate-900">S</span>
+      <nav className="container mx-auto px-4 py-6">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <img src="/s-logo.png" alt="Shedike Logo" className="w-24 h-auto" />
           </div>
-          <span className="text-xl text-slate-900">Shedike</span> */}
 
-          <img src="/s-logo.png" alt="Shedike Logo" className="w-32 h-auto" />
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center gap-8">
+            <a
+              href="#"
+              className="text-slate-700 hover:text-yellow-500 transition-colors"
+            >
+              Home
+            </a>
+            <button
+              onClick={onNavigateServices}
+              className="text-slate-700 hover:text-yellow-500 transition-colors"
+            >
+              Services
+            </button>
+
+            <button
+              onClick={onNavigateBusiness}
+              className="text-slate-700 hover:text-yellow-500 transition-colors"
+            >
+              Grow Your Business
+            </button>
+
+            <a
+              href="#how-it-works"
+              className="text-slate-700 hover:text-yellow-500 transition-colors"
+            >
+              How It Works
+            </a>
+            <a
+              href="#pricing"
+              className="text-slate-700 hover:text-yellow-500 transition-colors"
+            >
+              Pricing
+            </a>
+            <a
+              href="#about"
+              className="text-slate-700 hover:text-yellow-500 transition-colors"
+            >
+              About
+            </a>
+            <button
+              onClick={onNavigateContact}
+              className="text-slate-700 hover:text-yellow-500 transition-colors"
+            >
+              Contact Us
+            </button>
+
+            <Button
+              variant="outline"
+              className="border-slate-300 text-slate-700 hover:border-yellow-500 hover:text-yellow-500"
+            >
+              Sign In
+            </Button>
+            <Button className="bg-yellow-500 hover:bg-yellow-600 text-slate-900">
+              Get Started
+            </Button>
+          </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            className="md:hidden p-2 rounded-md hover:bg-slate-100 transition-colors"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            {mobileMenuOpen ? (
+              <X className="w-6 h-6 text-slate-900" />
+            ) : (
+              <Menu className="w-6 h-6 text-slate-900" />
+            )}
+          </button>
         </div>
 
-        <div className="hidden md:flex items-center gap-8">
-          <a
-            href="#"
-            className="text-slate-700 hover:text-yellow-500 transition-colors"
-          >
-            Home
-          </a>
-          <button
-            onClick={onNavigateServices}
-            className="text-slate-700 hover:text-yellow-500 transition-colors"
-          >
-            Services
-          </button>
-
-          <button
-            onClick={onNavigateBusiness}
-            className="text-slate-700 hover:text-yellow-500 transition-colors"
-          >
-            Grow Your Business
-          </button>
-
-          <a
-            href="#how-it-works"
-            className="text-slate-700 hover:text-yellow-500 transition-colors"
-          >
-            How It Works
-          </a>
-          <a
-            href="#pricing"
-            className="text-slate-700 hover:text-yellow-500 transition-colors"
-          >
-            Pricing
-          </a>
-          <a
-            href="#about"
-            className="text-slate-700 hover:text-yellow-500 transition-colors"
-          >
-            About
-          </a>
-          <button
-            onClick={onNavigateContact}
-            className="text-slate-700 hover:text-yellow-500 transition-colors"
-          >
-            Contact Us
-          </button>
-
-          <Button
-            variant="outline"
-            className="border-slate-300 text-slate-700 hover:border-yellow-500 hover:text-yellow-500"
-          >
-            Sign In
-          </Button>
-          <Button className="bg-yellow-500 hover:bg-yellow-600 text-slate-900">
-            Get Started
-          </Button>
-        </div>
+        {/* Mobile Navigation */}
+        {mobileMenuOpen && (
+          <div className="md:hidden mt-4 py-4 border-t border-slate-200">
+            <div className="flex flex-col gap-4">
+              <a
+                href="#"
+                className="text-slate-700 hover:text-yellow-500 transition-colors py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Home
+              </a>
+              <button
+                onClick={() => {
+                  onNavigateServices?.();
+                  setMobileMenuOpen(false);
+                }}
+                className="text-slate-700 hover:text-yellow-500 transition-colors py-2 text-left"
+              >
+                Services
+              </button>
+              <button
+                onClick={() => {
+                  onNavigateBusiness?.();
+                  setMobileMenuOpen(false);
+                }}
+                className="text-slate-700 hover:text-yellow-500 transition-colors py-2 text-left"
+              >
+                Grow Your Business
+              </button>
+              <a
+                href="#how-it-works"
+                className="text-slate-700 hover:text-yellow-500 transition-colors py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                How It Works
+              </a>
+              <a
+                href="#pricing"
+                className="text-slate-700 hover:text-yellow-500 transition-colors py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Pricing
+              </a>
+              <a
+                href="#about"
+                className="text-slate-700 hover:text-yellow-500 transition-colors py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                About
+              </a>
+              <button
+                onClick={() => {
+                  onNavigateContact?.();
+                  setMobileMenuOpen(false);
+                }}
+                className="text-slate-700 hover:text-yellow-500 transition-colors py-2 text-left"
+              >
+                Contact Us
+              </button>
+              <div className="flex flex-col gap-3 pt-4 border-t border-slate-200">
+                <Button
+                  variant="outline"
+                  className="border-slate-300 text-slate-700 hover:border-yellow-500 hover:text-yellow-500 w-full"
+                >
+                  Sign In
+                </Button>
+                <Button className="bg-yellow-500 hover:bg-yellow-600 text-slate-900 w-full">
+                  Get Started
+                </Button>
+              </div>
+            </div>
+          </div>
+        )}
       </nav>
 
       {/* Hero Content */}
@@ -164,7 +251,7 @@ export function HeroSection({
             </div>
             {/* Floating Card */}
             <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-xl border border-slate-100">
-              <div className="text-sm text-slate-500">Orders Shipped Today</div>
+              <div className="text-sm text-slate-500">Orders Shipped</div>
               <div className="text-3xl text-slate-900">12,847</div>
             </div>
           </div>

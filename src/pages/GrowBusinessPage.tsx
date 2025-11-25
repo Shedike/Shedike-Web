@@ -119,7 +119,7 @@ const businessGrowthData: BusinessGrowthData[] = [
       quote:
         "When I first started selling merch, I kept all the inventory in my closet and shipped everything from the same room I edit from. As my audience grew, so did the workload. I'd be up late shipping t-shirts and realized this wouldn't be viable long-term. I'd need to hire help, get warehouse space, and do all sorts of things that would cut into my profit. Shedike Fulfilment solved all these problems for me.",
       author: "Seth",
-      credentials: "Seth's Bike Hacks | 2.32M YouTube Subscribers",
+      credentials: "Seth's Bike Hacks",
     },
     whyChoose:
       "We've helped content creators fulfill their merch for years, working with everyone from growing influencers to major online personalities. Our specialized understanding of the creator economy means we recognize the unique needs of content businesses. We help transform your audience engagement into a sustainable revenue stream without adding operational complexity to your creative process.",
