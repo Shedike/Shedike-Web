@@ -25,8 +25,8 @@ export function FinalCTA() {
             </Button>
             <Button
               size="lg"
-              variant="outline"
-              className="border-white text-white hover:bg-white hover:text-slate-900 gap-2"
+              variant="ghost"
+              className="border border-white text-white hover:bg-white hover:text-slate-900 gap-2"
             >
               <Phone className="w-5 h-5" />
               Talk to Our Team
@@ -36,7 +36,7 @@ export function FinalCTA() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-8 text-slate-400">
             <div className="flex items-center gap-2">
               <Phone className="w-5 h-5" />
-              <span>1-800-SHEDIKE</span>
+              <span>+233 262 51 6656</span>
             </div>
             <div className="flex items-center gap-2">
               <MessageCircle className="w-5 h-5" />

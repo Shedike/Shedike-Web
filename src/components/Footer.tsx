@@ -2,23 +2,24 @@ import React from "react";
 import { Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
 
 const footerLinks = {
+
   "Kumasi Office (Head office)": [
-    "2nd floor gyamaras centre opp jofel restaurant airport airport about Kumasi",
-    "Whats-app +233 262 51 6656",
+    "2nd floor Gyamaras centre, opp Jofel restaurant airport roundabout, Kumasi",
+    "Whatsapp +233 262 51 6656",
     "Office +233 32 239 6561",
   ],
-  "Accra office": [
-    " GD 119 after church Street behind shell filing station near melcom Mallam Gbawe accra",
-    "Whats-app +233 50 189 6753",
-    "Office +233 32 239 6561 ",
-    "Shedikelagosops@gmail.com",
-  ],
-  "Lagos Office": [
-    "Ige Bdejo Estate, 2 Solomon Ige Street, Beside Abadek Filling Station, Agbenaje, ikola ipaja, Lagos",
-    "+2349130230883, +2348158634707",
-    "Shedikelagosops@gmail.com",
-  ],
-  // Company: ["About Us", "Careers", "Contact", "Blog"],
+  // "Accra office": [
+  //   " GD 119 after church Street behind shell filing station near melcom Mallam Gbawe accra",
+  //   "Whats-app +233 50 189 6753",
+  //   "Office +233 32 239 6561 ",
+  //   "Shedikelagosops@gmail.com",
+  // ],
+  // "Lagos Office": [
+  //   "Ige Bdejo Estate, 2 Solomon Ige Street, Beside Abadek Filling Station, Agbenaje, ikola ipaja, Lagos",
+  //   "+2349130230883, +2348158634707",
+  //   "Shedikelagosops@gmail.com",
+  // ],
+  Company: ["About Us", "Contact Us"],
 
   Legal: ["Privacy Policy", "Terms of Service", "Cookie Policy", "Security"],
 };

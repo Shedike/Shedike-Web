@@ -284,8 +284,12 @@ const businessGrowthData: BusinessGrowthData[] = [
 
 export function GrowBusinessPage({
   onNavigateHome,
+  onNavigateContact,
+  onNavigateServices,
 }: {
   onNavigateHome?: () => void;
+  onNavigateContact?: () => void;
+  onNavigateServices?: () => void;
 }) {
   const [selectedStrategy, setSelectedStrategy] =
     useState<BusinessGrowthData | null>(null);
@@ -296,6 +300,8 @@ export function GrowBusinessPage({
         strategy={selectedStrategy}
         onBack={() => setSelectedStrategy(null)}
         onNavigateHome={onNavigateHome}
+        onNavigateContact={onNavigateContact}
+        onNavigateServices={onNavigateServices}
       />
     );
   }
@@ -305,10 +311,11 @@ export function GrowBusinessPage({
       {/* Navigation */}
       <nav className="container mx-auto px-4 py-6 flex items-center justify-between border-b border-slate-200">
         <button onClick={onNavigateHome} className="flex items-center gap-2">
-          <div className="w-10 h-10 bg-gradient-to-br from-yellow-400 to-yellow-500 rounded-lg flex items-center justify-center">
+          {/* <div className="w-10 h-10 bg-gradient-to-br from-yellow-400 to-yellow-500 rounded-lg flex items-center justify-center">
             <span className="text-slate-900">S</span>
           </div>
-          <span className="text-xl text-slate-900">Shedike</span>
+          <span className="text-xl text-slate-900">Shedike</span> */}
+          <img src="/s-logo.png" alt="Shedike Logo" className="w-32 h-auto" />
         </button>
         <div className="hidden md:flex items-center gap-8">
           <button
@@ -317,19 +324,19 @@ export function GrowBusinessPage({
           >
             Home
           </button>
+          <button
+            onClick={onNavigateServices}
+            className="text-slate-700 hover:text-yellow-500 transition-colors"
+          >
+            Services
+          </button>
           <span className="text-yellow-500">Grow Your Audience</span>
-          <a
-            href="#pricing"
+          <button
+            onClick={onNavigateContact}
             className="text-slate-700 hover:text-yellow-500 transition-colors"
           >
-            Pricing
-          </a>
-          <a
-            href="#about"
-            className="text-slate-700 hover:text-yellow-500 transition-colors"
-          >
-            About
-          </a>
+            Contact Us
+          </button>
           <Button
             variant="outline"
             className="border-slate-300 text-slate-700 hover:border-yellow-500 hover:text-yellow-500"
@@ -418,20 +425,25 @@ function StrategyDetail({
   strategy,
   onBack,
   onNavigateHome,
+  onNavigateContact,
+  onNavigateServices,
 }: {
   strategy: BusinessGrowthData;
   onBack: () => void;
   onNavigateHome?: () => void;
+  onNavigateContact?: () => void;
+  onNavigateServices?: () => void;
 }) {
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation */}
       <nav className="container mx-auto px-4 py-6 flex items-center justify-between border-b border-slate-200">
         <button onClick={onNavigateHome} className="flex items-center gap-2">
-          <div className="w-10 h-10 bg-gradient-to-br from-yellow-400 to-yellow-500 rounded-lg flex items-center justify-center">
+          {/* <div className="w-10 h-10 bg-gradient-to-br from-yellow-400 to-yellow-500 rounded-lg flex items-center justify-center">
             <span className="text-slate-900">S</span>
           </div>
-          <span className="text-xl text-slate-900">Shedike</span>
+          <span className="text-xl text-slate-900">Shedike</span> */}
+          <img src="/s-logo.png" alt="Shedike Logo" className="w-32 h-auto" />
         </button>
         <div className="hidden md:flex items-center gap-8">
           <button
@@ -440,21 +452,21 @@ function StrategyDetail({
           >
             Home
           </button>
+          <button
+            onClick={onNavigateServices}
+            className="text-slate-700 hover:text-yellow-500 transition-colors"
+          >
+            Services
+          </button>
           <button onClick={onBack} className="text-yellow-500">
             Grow Your Audience
           </button>
-          <a
-            href="#pricing"
+          <button
+            onClick={onNavigateContact}
             className="text-slate-700 hover:text-yellow-500 transition-colors"
           >
-            Pricing
-          </a>
-          <a
-            href="#about"
-            className="text-slate-700 hover:text-yellow-500 transition-colors"
-          >
-            About
-          </a>
+            Contact Us
+          </button>
           <Button
             variant="outline"
             className="border-slate-300 text-slate-700 hover:border-yellow-500 hover:text-yellow-500"

@@ -21,7 +21,7 @@ export function ActiveRegionsMap() {
   ];
 
   return (
-    <section className="py-20 lg:py-32 bg-white">
+    <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-yellow-50 to-yellow-100 text-slate-900 px-6 py-2.5 rounded-full mb-6 border border-yellow-200 shadow-sm">
@@ -117,10 +117,25 @@ export function ActiveRegionsMap() {
                     Senegal
                   </span>
                   <span className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-sm border border-white/20 hover:bg-white/20 transition-colors">
+                    Mali
+                  </span>
+                  <span className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-sm border border-white/20 hover:bg-white/20 transition-colors">
+                    Benin
+                  </span>
+                  <span className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-sm border border-white/20 hover:bg-white/20 transition-colors">
+                    Burkina Faso
+                  </span>
+                  <span className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-sm border border-white/20 hover:bg-white/20 transition-colors">
                     Côte d'Ivoire
                   </span>
                   <span className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-sm border border-white/20 hover:bg-white/20 transition-colors">
                     Kenya
+                  </span>
+                  <span className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-sm border border-white/20 hover:bg-white/20 transition-colors">
+                    South Africa
+                  </span>
+                  <span className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-sm border border-white/20 hover:bg-white/20 transition-colors">
+                    Egypt
                   </span>
                 </div>
               </div>
@@ -132,7 +147,7 @@ export function ActiveRegionsMap() {
         <div className="grid md:grid-cols-4 gap-6 mt-20 max-w-5xl mx-auto">
           <div className="group text-center p-8 bg-gradient-to-br from-white to-slate-50 rounded-2xl border-2 border-slate-200 hover:border-yellow-400 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
             <div className="text-4xl text-transparent bg-clip-text bg-gradient-to-br from-yellow-500 to-yellow-600 mb-2">
-              2
+              3
             </div>
             <div className="text-slate-600">Active Countries</div>
           </div>

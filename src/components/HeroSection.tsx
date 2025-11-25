@@ -6,9 +6,11 @@ import { ImageWithFallback } from "./figma/ImageWithFallback";
 export function HeroSection({
   onNavigateServices,
   onNavigateBusiness,
+  onNavigateContact,
 }: {
   onNavigateServices?: () => void;
   onNavigateBusiness?: () => void;
+  onNavigateContact?: () => void;
 }) {
   return (
     <div className="relative bg-gradient-to-br from-yellow-50 via-white to-slate-50 overflow-hidden">
@@ -62,6 +64,12 @@ export function HeroSection({
           >
             About
           </a>
+          <button
+            onClick={onNavigateContact}
+            className="text-slate-700 hover:text-yellow-500 transition-colors"
+          >
+            Contact Us
+          </button>
 
           <Button
             variant="outline"
@@ -70,7 +78,7 @@ export function HeroSection({
             Sign In
           </Button>
           <Button className="bg-yellow-500 hover:bg-yellow-600 text-slate-900">
-            Get a Quote
+            Get Started
           </Button>
         </div>
       </nav>

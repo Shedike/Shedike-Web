@@ -43,7 +43,7 @@ const clientLogos = [
 
 export function WhyChooseUs() {
   return (
-    <section className="py-20 lg:py-32 bg-white">
+    <section className="py-20 lg:py-24 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-block bg-yellow-100 text-slate-900 px-4 py-2 rounded-full mb-4 border border-yellow-200">
