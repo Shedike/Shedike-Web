@@ -1,174 +1,32 @@
-import React, { useState } from "react";
+import React from "react";
 import { Button } from "./ui/button";
-import { ArrowRight, PlayCircle, CheckCircle2, Zap, Globe, Menu, X } from "lucide-react";
+import { ArrowRight, PlayCircle, CheckCircle2, Zap, Globe } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
+import { Header } from "./Header";
 
 export function HeroSection({
   onNavigateServices,
   onNavigateBusiness,
   onNavigateContact,
+  onNavigateHome,
 }: {
   onNavigateServices?: () => void;
   onNavigateBusiness?: () => void;
   onNavigateContact?: () => void;
+  onNavigateHome?: () => void;
 }) {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
     <div className="relative bg-gradient-to-br from-yellow-50 via-white to-slate-50 overflow-hidden">
       {/* Navigation */}
-      <nav className="container mx-auto px-4 py-6">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <img src="/s-logo.png" alt="Shedike Logo" className="w-24 h-auto" />
-          </div>
-
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
-            <a
-              href="#"
-              className="text-slate-700 hover:text-yellow-500 transition-colors"
-            >
-              Home
-            </a>
-            <button
-              onClick={onNavigateServices}
-              className="text-slate-700 hover:text-yellow-500 transition-colors"
-            >
-              Services
-            </button>
-
-            <button
-              onClick={onNavigateBusiness}
-              className="text-slate-700 hover:text-yellow-500 transition-colors"
-            >
-              Grow Your Business
-            </button>
-
-            <a
-              href="#how-it-works"
-              className="text-slate-700 hover:text-yellow-500 transition-colors"
-            >
-              How It Works
-            </a>
-            <a
-              href="#pricing"
-              className="text-slate-700 hover:text-yellow-500 transition-colors"
-            >
-              Pricing
-            </a>
-            <a
-              href="#about"
-              className="text-slate-700 hover:text-yellow-500 transition-colors"
-            >
-              About
-            </a>
-            <button
-              onClick={onNavigateContact}
-              className="text-slate-700 hover:text-yellow-500 transition-colors"
-            >
-              Contact Us
-            </button>
-
-            <Button
-              variant="outline"
-              className="border-slate-300 text-slate-700 hover:border-yellow-500 hover:text-yellow-500"
-            >
-              Sign In
-            </Button>
-            <Button className="bg-yellow-500 hover:bg-yellow-600 text-slate-900">
-              Get Started
-            </Button>
-          </div>
-
-          {/* Mobile Menu Button */}
-          <button
-            className="md:hidden p-2 rounded-md hover:bg-slate-100 transition-colors"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            aria-label="Toggle menu"
-          >
-            {mobileMenuOpen ? (
-              <X className="w-6 h-6 text-slate-900" />
-            ) : (
-              <Menu className="w-6 h-6 text-slate-900" />
-            )}
-          </button>
-        </div>
-
-        {/* Mobile Navigation */}
-        {mobileMenuOpen && (
-          <div className="md:hidden mt-4 py-4 border-t border-slate-200">
-            <div className="flex flex-col gap-4">
-              <a
-                href="#"
-                className="text-slate-700 hover:text-yellow-500 transition-colors py-2"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Home
-              </a>
-              <button
-                onClick={() => {
-                  onNavigateServices?.();
-                  setMobileMenuOpen(false);
-                }}
-                className="text-slate-700 hover:text-yellow-500 transition-colors py-2 text-left"
-              >
-                Services
-              </button>
-              <button
-                onClick={() => {
-                  onNavigateBusiness?.();
-                  setMobileMenuOpen(false);
-                }}
-                className="text-slate-700 hover:text-yellow-500 transition-colors py-2 text-left"
-              >
-                Grow Your Business
-              </button>
-              <a
-                href="#how-it-works"
-                className="text-slate-700 hover:text-yellow-500 transition-colors py-2"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                How It Works
-              </a>
-              <a
-                href="#pricing"
-                className="text-slate-700 hover:text-yellow-500 transition-colors py-2"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Pricing
-              </a>
-              <a
-                href="#about"
-                className="text-slate-700 hover:text-yellow-500 transition-colors py-2"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                About
-              </a>
-              <button
-                onClick={() => {
-                  onNavigateContact?.();
-                  setMobileMenuOpen(false);
-                }}
-                className="text-slate-700 hover:text-yellow-500 transition-colors py-2 text-left"
-              >
-                Contact Us
-              </button>
-              <div className="flex flex-col gap-3 pt-4 border-t border-slate-200">
-                <Button
-                  variant="outline"
-                  className="border-slate-300 text-slate-700 hover:border-yellow-500 hover:text-yellow-500 w-full"
-                >
-                  Sign In
-                </Button>
-                <Button className="bg-yellow-500 hover:bg-yellow-600 text-slate-900 w-full">
-                  Get Started
-                </Button>
-              </div>
-            </div>
-          </div>
-        )}
-      </nav>
+      {/* Navigation */}
+      <Header
+        onNavigateHome={onNavigateHome}
+        onNavigateServices={onNavigateServices}
+        onNavigateBusiness={onNavigateBusiness}
+        onNavigateContact={onNavigateContact}
+        activePage="home"
+      />
 
       {/* Hero Content */}
       <div className="container mx-auto px-4 py-20 lg:py-32">

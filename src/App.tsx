@@ -53,6 +53,7 @@ export default function App() {
   return (
     <div className="min-h-screen bg-white">
       <HeroSection
+        onNavigateHome={() => setCurrentPage("home")}
         onNavigateServices={() => setCurrentPage("services")}
         onNavigateBusiness={() => setCurrentPage("business")}
         onNavigateContact={() => setCurrentPage("contact")}

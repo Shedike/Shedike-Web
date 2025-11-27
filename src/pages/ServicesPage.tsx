@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Button } from "../components/ui/button";
 import { ArrowLeft, ArrowRight, Check } from "lucide-react";
 import { servicesData, ServiceData } from "../data/servicesData";
+import { Header } from "../components/Header";
 
 export function ServicesPage({
   onNavigateHome,
@@ -31,45 +32,15 @@ export function ServicesPage({
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation */}
-      <nav className="container mx-auto px-4 py-6 flex items-center justify-between border-b border-slate-200">
-        <button onClick={onNavigateHome} className="flex items-center gap-2">
-          {/* <div className="w-10 h-10 bg-gradient-to-br from-yellow-400 to-yellow-500 rounded-lg flex items-center justify-center">
-            <span className="text-slate-900">S</span>
-          </div>
-          <span className="text-xl text-slate-900">Shedike</span> */}
-          <img src="/s-logo.png" alt="Shedike Logo" className="w-32 h-auto" />
-        </button>
-        <div className="hidden md:flex items-center gap-8">
-          <button
-            onClick={onNavigateHome}
-            className="text-slate-700 hover:text-yellow-500 transition-colors"
-          >
-            Home
-          </button>
-          <span className="text-yellow-500">Services</span>
-          <button
-            onClick={onNavigateBusiness}
-            className="text-slate-700 hover:text-yellow-500 transition-colors"
-          >
-            Grow Your Business
-          </button>
-          <button
-            onClick={onNavigateContact}
-            className="text-slate-700 hover:text-yellow-500 transition-colors"
-          >
-            Contact Us
-          </button>
-          <Button
-            variant="outline"
-            className="border-slate-300 text-slate-700 hover:border-yellow-500 hover:text-yellow-500"
-          >
-            Sign In
-          </Button>
-          <Button className="bg-yellow-500 hover:bg-yellow-600 text-slate-900">
-            Get Started
-          </Button>
-        </div>
-      </nav>
+      {/* Navigation */}
+      <Header
+        onNavigateHome={onNavigateHome}
+        onNavigateServices={() => {}} // Already on services page
+        onNavigateBusiness={onNavigateBusiness}
+        onNavigateContact={onNavigateContact}
+        activePage="services"
+        className="border-b border-slate-200"
+      />
 
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-yellow-50 via-white to-slate-50 py-20">
@@ -156,47 +127,15 @@ function ServiceDetail({
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation */}
-      <nav className="container mx-auto px-4 py-6 flex items-center justify-between border-b border-slate-200">
-        <button onClick={onNavigateHome} className="flex items-center gap-2">
-          {/* <div className="w-10 h-10 bg-gradient-to-br from-yellow-400 to-yellow-500 rounded-lg flex items-center justify-center">
-            <span className="text-slate-900">S</span>
-          </div>
-          <span className="text-xl text-slate-900">Shedike</span> */}
-          <img src="/s-logo.png" alt="Shedike Logo" className="w-32 h-auto" />
-        </button>
-        <div className="hidden md:flex items-center gap-8">
-          <button
-            onClick={onNavigateHome}
-            className="text-slate-700 hover:text-yellow-500 transition-colors"
-          >
-            Home
-          </button>
-          <button onClick={onBack} className="text-yellow-500">
-            Services
-          </button>
-          <button
-            onClick={onNavigateBusiness}
-            className="text-slate-700 hover:text-yellow-500 transition-colors"
-          >
-            Grow Your Business
-          </button>
-          <button
-            onClick={onNavigateContact}
-            className="text-slate-700 hover:text-yellow-500 transition-colors"
-          >
-            Contact Us
-          </button>
-          <Button
-            variant="outline"
-            className="border-slate-300 text-slate-700 hover:border-yellow-500 hover:text-yellow-500"
-          >
-            Sign In
-          </Button>
-          <Button className="bg-yellow-500 hover:bg-yellow-600 text-slate-900">
-            Get Started
-          </Button>
-        </div>
-      </nav>
+      {/* Navigation */}
+      <Header
+        onNavigateHome={onNavigateHome}
+        onNavigateServices={onBack}
+        onNavigateBusiness={onNavigateBusiness}
+        onNavigateContact={onNavigateContact}
+        activePage="services"
+        className="border-b border-slate-200"
+      />
 
       {/* Back Button */}
       <div className="container mx-auto px-4 py-6">
